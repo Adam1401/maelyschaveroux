@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MC Makeup — Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/Logo.png" alt="Logo" />
+        <!--<div class="logo-mark">MC</div> 
+        <div class="brand-text">MAKEUP ARTIST</div> -->
+      </a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="tarifs.html" class="nav-link">Tarifs</a>
+        <a href="portfolio.html" class="nav-link active">Portfolio</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Menu latéral -->
+  <button id="menu-toggle" class="menu-toggle">☰</button>
+
+  <aside id="side-menu" class="side-menu">
+  <button id="menu-close" class="menu-close">✕</button>
+  <nav class="side-nav">
+      <a href="index.html">Accueil</a>
+      <a href="tarifs.html">Tarifs</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+  </nav>
+  </aside>
+
+  <main class="container fade-in">
+    <section class="portfolio-intro">
+      <h1>Portfolio</h1>
+      <p>Choisissez une catégorie et cliquez sur une carte pour agrandir la photo et lire la description.</p>
+      <div class="portfolio-filters">
+        <button class="filter-btn active" data-filter="all">Tout</button>
+        <button class="filter-btn" data-filter="mariée">Mariée</button>
+        <button class="filter-btn" data-filter="evenement">Événement</button>
+        <button class="filter-btn" data-filter="shooting">Shooting (mode/beauté/pub)</button>
+      </div>
+    </section>
+
+    <section class="portfolio-grid" id="portfolio-grid">
+      <!-- Exemple de carte : duplique / remplace par vos images -->
+      <article class="portfolio-card" data-category="shooting" data-images="assets/1.jpeg,assets/2.jpeg,assets/3.jpeg" data-title="Shooting — Modèles" data-desc="Description plus précise, genre waw la première photo est super cool c'est ma pote">
+        <img src="assets/1.jpeg" alt="" />
+        <div class="card-meta">
+          <h4>Shooting — Modèles</h4>
+          <p class="card-desc">Description de la carte</p>
+        </div>
+      </article>
+
+      <article class="portfolio-card" data-category="evenement" data-images="assets/4.jpeg,assets/7.jpeg" data-title="Evenement - Halloween" data-desc="Ca c'est les clowns des halles de Toulouse pour Halloween, ils font peur hein ? dinguerie ! ">
+        <img src="assets/4.jpeg" alt="" />
+        <div class="card-meta">
+          <h4>Evénement — Halloween</h4>
+          <p class="card-desc">Maquillages clown pour halloween, au halles de Toulouse</p>
+        </div>
+      </article>
+
+      <article class="portfolio-card" data-category="evenement">
+        <img src="assets/5.jpeg" alt="" />
+        <div class="card-meta">
+          <h4>Défié — créateurs</h4>
+          <p class="card-desc">Défilé sur le bateau a bordeaux, créatrice : Jean Michel</p>
+        </div>
+      </article>
+
+      <article class="portfolio-card" data-category="evenement">
+        <img src="assets/6.jpeg" alt="" />
+        <div class="card-meta">
+          <h4>Défié — créateurs</h4>
+          <p class="card-desc">Défilé sur le bateau a bordeaux, créatrice : Jean Michel</p>
+        </div>
+      </article>
+
+      <article class="portfolio-card" data-category="shooting">
+        <img src="assets/8.jpeg" alt="" />
+        <div class="card-meta">
+          <h4>Beauté — Studio</h4>
+          <p class="card-desc">Peau glowy, emphasis sur les yeux. Looks coordonnés pour le podium.</p>
+        </div>
+      </article>
+
+      <article class="portfolio-card" data-category="shooting">
+        <img src="assets/9.jpeg" alt="" />
+        <div class="card-meta">
+          <h4>Beauté — Studio</h4>
+          <p class="card-desc">Peau glowy, emphasis sur les yeux. Looks coordonnés pour le podium.</p>
+        </div>
+      </article>
+
+      <article class="portfolio-card" data-category="shooting">
+        <img src="assets/10.jpeg" alt="" />
+        <div class="card-meta">
+          <h4>Beauté — Studio</h4>
+          <p class="card-desc">Peau glowy, emphasis sur les yeux. Looks coordonnés pour le podium.</p>
+        </div>
+      </article>
+
+      <article class="portfolio-card" data-category="shooting">
+        <img src="assets/11.jpeg" alt="" />
+        <div class="card-meta">
+          <h4>Beauté — Studio</h4>
+          <p class="card-desc">Peau glowy, emphasis sur les yeux. Looks coordonnés pour le podium.</p>
+        </div>
+      </article>
+
+      <article class="portfolio-card" data-category="shooting">
+        <img src="assets/12.jpeg" alt="" />
+        <div class="card-meta">
+          <h4>Beauté — Studio</h4>
+          <p class="card-desc">Peau glowy, emphasis sur les yeux. Looks coordonnés pour le podium.</p>
+        </div>
+      </article>
+
+      <article class="portfolio-card" data-category="shooting">
+        <img src="assets/13.jpeg" alt="" />
+        <div class="card-meta">
+          <h4>Beauté — Studio</h4>
+          <p class="card-desc">Peau glowy, emphasis sur les yeux. Looks coordonnés pour le podium.</p>
+        </div>
+      </article>
+
+      <article class="portfolio-card" data-category="shooting">
+        <img src="assets/14.jpeg" alt="" />
+        <div class="card-meta">
+          <h4>Beauté — Studio</h4>
+          <p class="card-desc">Peau glowy, emphasis sur les yeux. Looks coordonnés pour le podium.</p>
+        </div>
+      </article>
+
+      <article class="portfolio-card" data-category="shooting">
+        <img src="assets/15.jpeg" alt="" />
+        <div class="card-meta">
+          <h4>Beauté — Studio</h4>
+          <p class="card-desc">Peau glowy, emphasis sur les yeux. Looks coordonnés pour le podium.</p>
+        </div>
+      </article>
+
+      <article class="portfolio-card" data-category="shooting">
+        <img src="assets/16.jpeg" alt="" />
+        <div class="card-meta">
+          <h4>Beauté — Studio</h4>
+          <p class="card-desc">Peau glowy, emphasis sur les yeux. Looks coordonnés pour le podium.</p>
+        </div>
+      </article>
+
+      <article class="portfolio-card" data-category="shooting">
+        <img src="assets/Couverture.jpeg" alt="" />
+        <div class="card-meta">
+          <h4>Beauté — Studio</h4>
+          <p class="card-desc">Peau glowy, emphasis sur les yeux. Looks coordonnés pour le podium.</p>
+        </div>
+      </article>
+      
+
+      <!-- Ajoute autant de cartes que tu veux -->
+    </section>
+  </main>
+
+  <div id="portfolio-modal" class="portfolio-modal" aria-hidden="true">
+    <div class="modal-inner">
+      <button class="modal-close" aria-label="Fermer">✕</button>
+      <div class="modal-media">
+        <div class="modal-carousel">
+          <div class="modal-carousel-track" id="modal-carousel-track">
+            <!-- Les images seront injectées ici par JS -->
+          </div>
+          <button class="modal-carousel-btn prev" aria-label="Image précédente">‹</button>
+          <button class="modal-carousel-btn next" aria-label="Image suivante">›</button>
+        </div>
+      </div>
+      <aside class="modal-info">
+        <h3 id="modal-title">Titre</h3>
+        <p id="modal-desc">Description détaillée du projet...</p>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <strong>MC Makeup</strong></div>
+      <div class="footer-links"><a href="index.html">Accueil</a></div>
+    </div>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

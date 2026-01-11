@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MC Makeup — Contact</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/Logo.png" alt="Logo" />
+        <!--<div class="logo-mark">MC</div> 
+        <div class="brand-text">MAKEUP ARTIST</div> -->
+      </a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="tarifs.html" class="nav-link">Tarifs</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Menu latéral -->
+  <button id="menu-toggle" class="menu-toggle">☰</button>
+
+  <aside id="side-menu" class="side-menu">
+  <button id="menu-close" class="menu-close">✕</button>
+  <nav class="side-nav">
+      <a href="index.html">Accueil</a>
+      <a href="tarifs.html">Tarifs</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+  </nav>
+  </aside>
+
+  <main class="container contact-page fade-in">
+    <section class="contact-info">
+      <h1>Contact</h1>
+      <p>Pour toute demande de disponibilité ou devis, écris-moi :</p>
+      <ul class="contact-list">
+        <li>Téléphone : <a href="tel:+33684892579">06-84-89-25-79</a></li>
+        <li>Email : <a href="mailto:maelyschaveroux.pro@gmail.com">maelyschaveroux.pro@gmail.com</a></li>
+        <li>Réseaux : <a href="https://www.instagram.com/maelys.muapro/#" target="_blank">Instagram</a> • <a href="https://www.tiktok.com/@maelys.muapro" target="_blank">TikTok</a> • <a href="https://www.threads.com/@maelys.muapro" target="_blank">Threads</a></li>
+      </ul>
+    </section>
+
+    <section class="contact-form">
+      <h2>Écris-moi</h2>
+      <form id="contact-form-2" action="#" method="post" novalidate>
+        <div class="form-row"><label for="c-name">Nom</label><input id="c-name" name="name" type="text" required /></div>
+        <div class="form-row"><label for="c-email">Email</label><input id="c-email" name="email" type="email" required /></div>
+        <div class="form-row"><label for="c-msg">Message</label><textarea id="c-msg" name="message" rows="6" required></textarea></div>
+        <div class="form-actions"><button class="btn btn-primary" type="submit">Envoyer</button></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <strong>MC Makeup</strong></div>
+    </div>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
