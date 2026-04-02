@@ -40,8 +40,8 @@
   <main class="container fade-in">
     <!-- Hero -->
     <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-left">
+      <div class="hero-inner">
+        <div class="hero-content">
           <h1>Maquilleuse professionnelle<br/>Spécialiste look luxe & glamour</h1>
           <p class="lead">Je sublime vos projets : mariages, shootings, défilés et tournages. Style élégant, délicat et précis — pour une peau parfaite et un rendu photographique impeccable.</p>
           <div class="cta-row">
@@ -49,8 +49,7 @@
             <a class="btn btn-ghost" href="tarifs.html">Voir mes tarifs</a>
           </div>
         </div>
-        <div class="hero-right">
-          <!-- place ici une de tes photos en portrait -->
+        <div class="hero-image">
           <img src="assets/Couverture.jpeg" alt="Exemple maquillage" />
         </div>
       </div>
@@ -58,27 +57,33 @@
 
     <!-- À propos -->
     <section class="about container">
-      <div class="grid-2">
-        <div>
-          <h2>À propos</h2>
-          <p>Depuis plus de 8 ans, je travaille avec des photographes, stylistes et réalisateurs pour créer des looks qui subliment chaque visage et racontent une histoire. Formée aux techniques modernes et aux exigences du plateau, je privilégie un maquillage qui tient sous les projecteurs et qui reste beau en photo.</p>
-          <p>Mon approche : écoute, précision et créativité. Je m’adapte à chaque projet pour obtenir un rendu naturel, couture ou editorial selon vos besoins.</p>
+      
+        <h2 class="about-title-mobile">À propos</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <h2>À propos</h2>
+            <p>Depuis plus de 8 ans, je travaille avec des photographes, stylistes et réalisateurs pour créer des looks qui subliment chaque visage et racontent une histoire. Formée aux techniques modernes et aux exigences du plateau, je privilégie un maquillage qui tient sous les projecteurs et qui reste beau en photo.</p>
+            <p>Mon approche : écoute, précision et créativité. Je m'adapte à chaque projet pour obtenir un rendu naturel, couture ou editorial selon vos besoins.</p>
+          </div>
+          <div class="about-media">
+            <img src="assets/maelys.jpg" alt="Portrait maquillage" />
+          </div>
+          <div class="about-stats">
+            <div class="stat">
+              <div class="stat-number">8+</div>
+              <div class="stat-label">années d'expérience</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">500+</div>
+              <div class="stat-label">réalisations</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">Photographie • Film • Mariage</div>
+              <div class="stat-label">Domaines</div>
+            </div>
+          </div>
         </div>
-        <div class="about-stats">
-          <div class="stat">
-            <div class="stat-number">8+</div>
-            <div class="stat-label">années d'expérience</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number">500+</div>
-            <div class="stat-label">réalisations</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number">Photographie • Film • Mariage</div>
-            <div class="stat-label">Domaines</div>
-          </div>
-        </div>
-      </div>
+      
     </section>
 
     <!-- Réseaux -->
@@ -133,7 +138,6 @@
       </div>
     </footer>
   </main>
-</main>
 
   <!-- Indicateur pour inviter à faire défiler -->
   <div id="scroll-hint" class="scroll-hint" aria-hidden="true">

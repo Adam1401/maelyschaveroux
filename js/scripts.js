@@ -105,9 +105,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const next = carousel.querySelector('.carousel-btn.next');
     let index = 0;
     const cardWidth = carousel.querySelector('.testimonial-card')?.offsetWidth || 320;
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
     function updateCarousel(){
       track.style.transform = `translateX(${-(index * (cardWidth + 12))}px)`;
     }
+    
     prev.addEventListener('click', function(){
       index = Math.max(0, index - 1);
       updateCarousel();
@@ -117,6 +121,32 @@ document.addEventListener('DOMContentLoaded', function() {
       index = Math.min(maxIndex, index + 1);
       updateCarousel();
     });
+
+    // Swipe detection for mobile
+    track.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, false);
+
+    track.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, false);
+
+    function handleSwipe(){
+      const swipeThreshold = 50;
+      const diff = touchStartX - touchEndX;
+      const maxIndex = Math.max(0, track.children.length - Math.floor(carousel.offsetWidth / (cardWidth + 12)));
+      
+      if(diff > swipeThreshold){
+        // Swipe left - next slide
+        index = Math.min(maxIndex, index + 1);
+        updateCarousel();
+      } else if(diff < -swipeThreshold){
+        // Swipe right - previous slide
+        index = Math.max(0, index - 1);
+        updateCarousel();
+      }
+    }
 
     // optional auto-scroll
     let auto = setInterval(function(){
@@ -134,15 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  /* --- Simple form handlers (prevent default and show a friendly message) --- */
-  const forms = document.querySelectorAll('form');
-  forms.forEach(form=>{
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      alert('Merci — votre message a été envoyé (placeholder). Je vous réponds sous 48h.');
-      form.reset();
-    });
-  });
+  /* --- Forms removed: contact actions replaced by mailto buttons in HTML --- */
   /* --- Menu latéral mobile --- */
 const menuToggle = document.getElementById('menu-toggle');
 const sideMenu = document.getElementById('side-menu');
