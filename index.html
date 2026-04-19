@@ -235,14 +235,7 @@
     position: relative;
   }
   .apropos-photo-wrap::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    right: -8px;
-    width: 60%;
-    height: 60%;
-    border: 1px solid var(--gold);
-    pointer-events: none;
+    display: none;
   }
   .apropos-photo {
     width: 100%;
@@ -894,11 +887,7 @@
 <section id="apropos">
   <div class="apropos-grid">
     <div class="apropos-photo-wrap fade-in">
-      <!-- <img src="Images/maelys.jpg" alt="Maelys Chaveroux Makeup Artist" class="apropos-photo"> -->
-      <div class="photo-placeholder">
-        <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="14" r="7" stroke="#C9A96E" stroke-width="1"/><path d="M6 38c0-7.732 6.268-14 14-14s14 6.268 14 14" stroke="#C9A96E" stroke-width="1"/></svg>
-        <p>Votre photo ici<br>format portrait recommandé</p>
-      </div>
+      <img src="Images/maelys.jpg" alt="Maelys Chaveroux Makeup Artist" class="apropos-photo">
     </div>
     <div class="fade-in">
       <p class="section-label">À propos</p>
@@ -930,10 +919,10 @@
       </div>
 
       <ul class="certif-list" style="margin-top:2rem">
-        <li>Diplômée [Votre école / formation — à compléter]</li>
-        <li>Formation avancée en maquillage éditorial et artistique</li>
+        <li>BTS esthétique Silvya Terrade à Bordeaux (2025)</li>
+        <li>Formation maquillage et coiffure Backstage a Toulouse (2026)</li>
+        <li>Spécialisation en maquillage éditorial et artistique</li>
         <li>Spécialisation maquillage de mariée</li>
-        <li>[Autre certification — à compléter]</li>
       </ul>
     </div>
   </div>
@@ -1080,12 +1069,9 @@
     <div class="portfolio-pack wide"
       data-pack-title="Mariage de Sophie & Thomas"
       data-pack-type="Mariage · Bordeaux"
-      data-images='["votre-photo-1.jpg","votre-photo-2.jpg","votre-photo-3.jpg","votre-photo-4.jpg"]'
+      data-images='["Images/1.jpeg","Images/2.jpeg","Images/3.jpeg","Images/4.jpeg"]'
       onclick="openLightbox(this)">
-      <div class="pack-photo-placeholder">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="2" y="6" width="28" height="20" rx="2" stroke="#C9A96E" stroke-width="1"/><circle cx="16" cy="16" r="5" stroke="#C9A96E" stroke-width="1"/></svg>
-        <p>Couverture pack 1<br>Remplacez par votre image</p>
-      </div>
+      <img src="Images/1.jpeg" alt="Mariage de Sophie & Thomas" class="portfolio-cover">
       <div class="portfolio-pack-overlay">
         <span class="pack-label">Mariage · Bordeaux</span>
         <span class="pack-title">Sophie & Thomas</span>
@@ -1097,12 +1083,9 @@
     <div class="portfolio-pack"
       data-pack-title="Shooting Éditorial Automne"
       data-pack-type="Shooting · Mode"
-      data-images='["votre-photo-5.jpg","votre-photo-6.jpg","votre-photo-7.jpg"]'
+      data-images='["Images/5.jpeg","Images/6.jpeg","Images/7.jpeg"]'
       onclick="openLightbox(this)">
-      <div class="pack-photo-placeholder">
-        <svg width="24" height="24" viewBox="0 0 32 32" fill="none"><rect x="2" y="6" width="28" height="20" rx="2" stroke="#C9A96E" stroke-width="1"/><circle cx="16" cy="16" r="5" stroke="#C9A96E" stroke-width="1"/></svg>
-        <p>Pack 2</p>
-      </div>
+      <img src="Images/5.jpeg" alt="Shooting Éditorial Automne" class="portfolio-cover">
       <div class="portfolio-pack-overlay">
         <span class="pack-label">Shooting · Mode</span>
         <span class="pack-title">Éditorial Automne</span>
@@ -1114,12 +1097,9 @@
     <div class="portfolio-pack"
       data-pack-title="Mariage de Clara & Julien"
       data-pack-type="Mariage · Toulouse"
-      data-images='["votre-photo-8.jpg","votre-photo-9.jpg","votre-photo-10.jpg","votre-photo-11.jpg","votre-photo-12.jpg"]'
+      data-images='["Images/8.jpeg","Images/9.jpeg","Images/10.jpeg","Images/11.jpeg","Images/12.jpeg"]'
       onclick="openLightbox(this)">
-      <div class="pack-photo-placeholder">
-        <svg width="24" height="24" viewBox="0 0 32 32" fill="none"><rect x="2" y="6" width="28" height="20" rx="2" stroke="#C9A96E" stroke-width="1"/><circle cx="16" cy="16" r="5" stroke="#C9A96E" stroke-width="1"/></svg>
-        <p>Pack 3</p>
-      </div>
+      <img src="Images/8.jpeg" alt="Mariage de Clara & Julien" class="portfolio-cover">
       <div class="portfolio-pack-overlay">
         <span class="pack-label">Mariage · Toulouse</span>
         <span class="pack-title">Clara & Julien</span>
@@ -1131,12 +1111,9 @@
     <div class="portfolio-pack"
       data-pack-title="Campagne Beauté"
       data-pack-type="Shooting · Publicitaire"
-      data-images='["votre-photo-13.jpg","votre-photo-14.jpg"]'
+      data-images='["Images/13.jpeg","Images/14.jpeg"]'
       onclick="openLightbox(this)">
-      <div class="pack-photo-placeholder">
-        <svg width="24" height="24" viewBox="0 0 32 32" fill="none"><rect x="2" y="6" width="28" height="20" rx="2" stroke="#C9A96E" stroke-width="1"/><circle cx="16" cy="16" r="5" stroke="#C9A96E" stroke-width="1"/></svg>
-        <p>Pack 4</p>
-      </div>
+      <img src="Images/13.jpeg" alt="Campagne Beauté" class="portfolio-cover">
       <div class="portfolio-pack-overlay">
         <span class="pack-label">Shooting · Publicitaire</span>
         <span class="pack-title">Campagne Beauté</span>
@@ -1148,16 +1125,13 @@
     <div class="portfolio-pack wide"
       data-pack-title="Mariage d'Ambre & Rémi"
       data-pack-type="Mariage · Arcachon"
-      data-images='["votre-photo-15.jpg","votre-photo-16.jpg","votre-photo-17.jpg"]'
+      data-images='["Images/15.jpeg","Images/16.jpeg"]'
       onclick="openLightbox(this)">
-      <div class="pack-photo-placeholder">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="2" y="6" width="28" height="20" rx="2" stroke="#C9A96E" stroke-width="1"/><circle cx="16" cy="16" r="5" stroke="#C9A96E" stroke-width="1"/></svg>
-        <p>Couverture pack 5<br>Remplacez par votre image</p>
-      </div>
+      <img src="Images/15.jpeg" alt="Mariage d'Ambre & Rémi" class="portfolio-cover">
       <div class="portfolio-pack-overlay">
         <span class="pack-label">Mariage · Arcachon</span>
         <span class="pack-title">Ambre & Rémi</span>
-        <span class="pack-count">3 photos</span>
+        <span class="pack-count">2 photos</span>
       </div>
     </div>
   </div>
