@@ -15,11 +15,11 @@
 
 <style>
   :root {
-    --bordeaux: #3D0C11;
+    --bordeaux: #3B1417;
     --bordeaux-mid: #5A1520;
     --bordeaux-light: #7A2535;
     --cream: #F5EFE6;
-    --cream-dark: #EDE3D4;
+    --cream-dark: #D1C7BE;
     --cream-mid: #D4C4B0;
     --gold: #C9A96E;
     --gold-light: #E8D5B0;
@@ -124,13 +124,15 @@
     /* ── REMPLACER PAR VOTRE PHOTO DE FOND : background-image: url('votre-photo-hero.jpg'); ── */
     background-image: url('Images/Couverture.jpeg'); /*linear-gradient(160deg, #5A1520 0%, #3D0C11 60%, #1A0608 100%);*/
     background-size: cover;
-    background-position: center 25%;
+    background-position: center top;
     opacity: 0.55;
   }
   .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(61,12,17,0.92) 0%, rgba(61,12,17,0.3) 60%, transparent 100%);
+    /*background: linear-gradient(to top, rgba(209,199,190,0.2) 0%, rgba(209,199,190,0.1) 60%, transparent 100%);
+    /*    background: linear-gradient(to top, rgba(61,12,17,0.92) 0%, rgba(61,12,17,0.3) 60%, transparent 100%);*/
+
   }
   .hero-content { position: relative; z-index: 2; }
   .hero-eyebrow {
@@ -156,7 +158,7 @@
     font-size: 0.75rem;
     font-weight: 300;
     letter-spacing: 0.25em;
-    color: var(--cream-mid);
+    color: var(--cream-dark);
     text-transform: uppercase;
     margin-bottom: 2.5rem;
   }
@@ -430,7 +432,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 25%;
     display: block;
     transition: transform 0.5s ease;
   }
@@ -677,26 +678,25 @@
   }
   .contact-item a, .contact-item span {
     font-size: 0.9rem;
-    color: var(--bordeaux);
+    color: var(--gold);
     text-decoration: none;
     font-weight: 300;
   }
   .contact-item a:hover { color: var(--gold); }
   .contact-cta {
     display: inline-block;
-    background: transparent;
-    color: var(--bordeaux);
+    background: var(--bordeaux);
+    color: var(--cream);
     font-size: 0.65rem;
     font-weight: 400;
     letter-spacing: 0.25em;
     text-transform: uppercase;
     text-decoration: none;
     padding: 1rem 2rem;
-    border: 1px solid var(--bordeaux);
-    transition: all 0.2s;
+    transition: background 0.2s;
     text-align: center;
   }
-  .contact-cta:hover { background: var(--bordeaux); color: var(--cream); }
+  .contact-cta:hover { background: var(--bordeaux-light); }
   .zone-info {
     font-size: 0.75rem;
     color: #5a3030;
@@ -876,7 +876,7 @@
   <div class="hero-content">
     <p class="hero-eyebrow">Makeup Artist — Nouvelle-Aquitaine</p>
     <h1 class="hero-title">Maelys<br><em>Chaveroux</em></h1>
-    <p class="hero-subtitle">Mariages &nbsp;·&nbsp; Shootings &nbsp;·&nbsp; Bordeaux &nbsp;·&nbsp; Toulouse</p>
+    <p class="hero-subtitle">Bordeaux &nbsp;·&nbsp; Toulouse</p>
     <a href="#contact" class="hero-cta">Prendre rendez-vous &nbsp;→</a>
   </div>
   <div class="hero-scroll">
@@ -889,19 +889,31 @@
 <section id="apropos">
   <div class="apropos-grid">
     <div class="apropos-photo-wrap fade-in">
-      <img src="Images/maelys.jpg" alt="Maelys Chaveroux Makeup Artist" class="apropos-photo">
+      <img src="Images/maelys.jpeg" alt="Maelys Chaveroux Makeup Artist" class="apropos-photo">
     </div>
     <div class="fade-in">
       <p class="section-label">À propos</p>
-      <h2 class="section-title">Une main<br>experte,<br>un regard<br>artiste</h2>
+      <h2 class="section-title">Révéler ce que vous êtes,<br>sublimer ce que vous ressentez</h2>
       <div class="divider"></div>
       <div class="apropos-text">
-        <p>Bonjour, je suis Maelys Chaveroux, maquilleuse professionnelle basée en Nouvelle-Aquitaine. Passionnée depuis toujours par l'art du maquillage, j'ai fait de cette passion un métier d'exigence et de précision.</p>
-        <p>J'interviens principalement sur les mariages et les shootings photo — personnels comme publicitaires — avec une approche sur-mesure qui met en valeur votre personnalité et sublimera chaque image.</p>
-        <p>Ma zone d'intervention couvre la Nouvelle-Aquitaine, avec une présence régulière à Bordeaux et Toulouse. Je me déplace également sur l'ensemble du territoire sur demande.</p>
+        <p>Enchantée moi c’est Maelys, makeup artist diplômée.</p>
+        <p>Cela serait vous mentir si je vous disais que j’ai toujours 
+          voulu faire ce métier, ce qui m’a toujours guidé en revanche c’est l’envie profonde 
+          de prendre soins des autres. Mon parcours en témoigne : psychomotricienne, en pensant par
+           esthéticienne jusqu’à trouver ma véritable voie dans le maquillage. Pour moi, le maquillage c’est une
+            manière de prendre soins de vous, de vous aider à vous faire sentir pleinement vous-même, et de vous faire
+             prendre confiance en vous. Chaque prestation est pensée comme un moment unique, une expérience où l’écoute et 
+             la mise en valeur sont au cœur de mon travail.</p>
+        <p>Parce que je sais ce que c’est de manquer de confiance en soi, j’accorde avec une importance particulière à ce que 
+          chaque personne qui passe entre mes mains reparte non seulement satisfaite, mais aussi plus sûre d’elle. Aujourd’hui, 
+          mon objectif est de vous accompagner, que ce soit pour un évènement, un moment important ou simplement vous offrir une 
+          parenthèse beauté avec une approche à la fois professionnelle, douce et personnalisée à chacun(e).</p>
+        <p>Alors bienvenue, en espérant vous rencontrez bientôt, 
+          Maelys.
+        </p>
       </div>
 
-      <div class="valeurs-grid">
+      <!--<div class="valeurs-grid">
         <div class="valeur-card">
           <h4>Sur-mesure</h4>
           <p>Chaque visage est unique. Chaque prestation est pensée pour vous et pour vous seul(e).</p>
@@ -918,13 +930,11 @@
           <h4>Durabilité</h4>
           <p>Des formules longue tenue, testées pour tenir toute la journée et toute la nuit.</p>
         </div>
-      </div>
+      </div>-->
 
       <ul class="certif-list" style="margin-top:2rem">
-        <li>BTS esthétique Silvya Terrade à Bordeaux (2025)</li>
-        <li>Formation maquillage et coiffure Backstage a Toulouse (2026)</li>
-        <li>Spécialisation en maquillage éditorial et artistique</li>
-        <li>Spécialisation maquillage de mariée</li>
+        <li>BTS esthétique Silvya Terrade (Bordeaux - 2025)</li>
+        <li>Formation maquillage Backstage Academie  (Toulouse - 2026)</li>
       </ul>
     </div>
   </div>
@@ -1069,71 +1079,97 @@
   <div class="portfolio-grid">
     <!-- Pack 1 : Mariage (large) -->
     <div class="portfolio-pack wide"
-      data-pack-title="Mariage de Sophie & Thomas"
-      data-pack-type="Mariage · Bordeaux"
-      data-images='["Images/1.jpeg","Images/2.jpeg","Images/3.jpeg","Images/4.jpeg"]'
+      data-pack-title="Elodie"
+      data-pack-type="Shooting · Publicitaire"
+      data-images='["Images/Couverture.jpeg","Images/elodie1.jpeg","Images/elodie2.jpeg"]'
       onclick="openLightbox(this)">
-      <img src="Images/1.jpeg" alt="Mariage de Sophie & Thomas" class="portfolio-cover">
+      <img src="Images/Couverture.jpeg" alt="Elodie" class="portfolio-cover">
       <div class="portfolio-pack-overlay">
-        <span class="pack-label">Mariage · Bordeaux</span>
-        <span class="pack-title">Sophie & Thomas</span>
-        <span class="pack-count">4 photos</span>
+        <span class="pack-label">Shooting · Publicitaire</span>
+        <span class="pack-title">Elodie</span>
+        <span class="pack-count">3 photos</span>
       </div>
     </div>
 
     <!-- Pack 2 -->
     <div class="portfolio-pack"
-      data-pack-title="Shooting Éditorial Automne"
-      data-pack-type="Shooting · Mode"
-      data-images='["Images/5.jpeg","Images/6.jpeg","Images/7.jpeg"]'
+      data-pack-title="Anna"
+      data-pack-type="Shooting · Beauté · Publicitaire"
+      data-images='["Images/anna1.jpeg","Images/anna2.jpeg"]'
       onclick="openLightbox(this)">
-      <img src="Images/5.jpeg" alt="Shooting Éditorial Automne" class="portfolio-cover">
+      <img src="Images/anna2.jpeg" alt="Anna" class="portfolio-cover">
       <div class="portfolio-pack-overlay">
-        <span class="pack-label">Shooting · Mode</span>
-        <span class="pack-title">Éditorial Automne</span>
-        <span class="pack-count">3 photos</span>
+        <span class="pack-label">Shooting · Beauté · Publicitaire</span>
+        <span class="pack-title">Anna</span>
+        <span class="pack-count">2 photos</span>
       </div>
     </div>
 
     <!-- Pack 3 -->
     <div class="portfolio-pack"
-      data-pack-title="Mariage de Clara & Julien"
-      data-pack-type="Mariage · Toulouse"
-      data-images='["Images/8.jpeg","Images/9.jpeg","Images/10.jpeg","Images/11.jpeg","Images/12.jpeg"]'
+      data-pack-title="Manon"
+      data-pack-type="Shooting · Beauté"
+      data-images='["Images/manon1.jpeg","Images/manon2.jpeg"]'
       onclick="openLightbox(this)">
-      <img src="Images/8.jpeg" alt="Mariage de Clara & Julien" class="portfolio-cover">
+      <img src="Images/manon1.jpeg" alt="Manon" class="portfolio-cover">
       <div class="portfolio-pack-overlay">
-        <span class="pack-label">Mariage · Toulouse</span>
-        <span class="pack-title">Clara & Julien</span>
-        <span class="pack-count">5 photos</span>
+        <span class="pack-label">Shooting · Beauté</span>
+        <span class="pack-title">Manon</span>
+        <span class="pack-count">2 photos</span>
       </div>
     </div>
 
     <!-- Pack 4 -->
     <div class="portfolio-pack"
-      data-pack-title="Campagne Beauté"
-      data-pack-type="Shooting · Publicitaire"
-      data-images='["Images/13.jpeg","Images/14.jpeg"]'
+      data-pack-title="Justine"
+      data-pack-type="Shooting · Beauté"
+      data-images='["Images/justine1.jpeg"]'
       onclick="openLightbox(this)">
-      <img src="Images/13.jpeg" alt="Campagne Beauté" class="portfolio-cover">
+      <img src="Images/justine1.jpeg" alt="Justine" class="portfolio-cover">
       <div class="portfolio-pack-overlay">
-        <span class="pack-label">Shooting · Publicitaire</span>
-        <span class="pack-title">Campagne Beauté</span>
-        <span class="pack-count">2 photos</span>
+        <span class="pack-label">Shooting · Beauté</span>
+        <span class="pack-title">Justine</span>
+        <span class="pack-count">1 photo</span>
+      </div>
+    </div>
+
+    <div class="portfolio-pack"
+      data-pack-title="Lucia"
+      data-pack-type="Shooting · Beauté · Publicitaire"
+      data-images='["Images/lucia1.jpeg"]'
+      onclick="openLightbox(this)">
+      <img src="Images/lucia1.jpeg" alt="Lucia" class="portfolio-cover">
+      <div class="portfolio-pack-overlay">
+        <span class="pack-label">Shooting · Beauté · Publicitaire</span>
+        <span class="pack-title">Lucia</span>
+        <span class="pack-count">1 photo</span>
       </div>
     </div>
 
     <!-- Pack 5 : Mariage (large) -->
     <div class="portfolio-pack wide"
-      data-pack-title="Mariage d'Ambre & Rémi"
-      data-pack-type="Mariage · Arcachon"
-      data-images='["Images/15.jpeg","Images/16.jpeg"]'
+      data-pack-title="Claire"
+      data-pack-type="Shooting · Beauté"
+      data-images='["Images/claire1.jpeg"]'
       onclick="openLightbox(this)">
-      <img src="Images/15.jpeg" alt="Mariage d'Ambre & Rémi" class="portfolio-cover">
+      <img src="Images/claire1.jpeg" alt="Claire" class="portfolio-cover">
       <div class="portfolio-pack-overlay">
-        <span class="pack-label">Mariage · Arcachon</span>
-        <span class="pack-title">Ambre & Rémi</span>
-        <span class="pack-count">2 photos</span>
+        <span class="pack-label">Shooting · Beauté</span>
+        <span class="pack-title">Claire</span>
+        <span class="pack-count">1 photo</span>
+      </div>
+    </div>
+
+    <div class="portfolio-pack"
+      data-pack-title="Elena et Lola"
+      data-pack-type="Shooting · Beauté · Publicitaire"
+      data-images='["Images/elena_lola1.jpeg"]'
+      onclick="openLightbox(this)">
+      <img src="Images/elena_lola1.jpeg" alt="Elena et Lola" class="portfolio-cover">
+      <div class="portfolio-pack-overlay">
+        <span class="pack-label">Shooting · Beauté · Publicitaire</span>
+        <span class="pack-title">Elena et Lola</span>
+        <span class="pack-count">1 photo</span>
       </div>
     </div>
   </div>
@@ -1190,15 +1226,15 @@
       <div class="contact-item">
         <span class="contact-item-label">Email</span>
         <!-- Remplacez par votre email -->
-        <a href="mailto:contact@maelyschaverouxmua.com">contact@maelyschaverouxmua.com</a>
+        <a href="mailto:maelyschaveroux.pro@gmail.com">maelyschaveroux.pro@gmail.com</a>
       </div>
       <div class="contact-item">
         <span class="contact-item-label">Téléphone</span>
         <!-- Remplacez par votre numéro -->
-        <a href="tel:+33600000000">+33 6 00 00 00 00</a>
+        <a href="tel:+33684892579">+33 6 84 89 25 79</a>
       </div>
       <div class="contact-item" style="margin-top:0.5rem">
-        <a href="mailto:contact@maelyschaverouxmua.com" class="contact-cta">Demander un devis gratuit</a>
+        <a href="mailto:maelyschaveroux.pro@gmail.com" class="contact-cta">Demander un devis gratuit</a>
       </div>
     </div>
   </div>
@@ -1211,23 +1247,23 @@
     <p class="reseaux-sub">Inspirations · Coulisses · Créations</p>
     <div class="reseaux-links">
       <!-- Remplacez les # par vos vrais liens -->
-      <a href="#" target="_blank" rel="noopener" class="reseau-link">
+      <a href="https://www.instagram.com/maelys.muapro" target="_blank" rel="noopener" class="reseau-link">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
         Instagram
       </a>
-      <a href="#" target="_blank" rel="noopener" class="reseau-link">
+      <a href="https://www.tiktok.com/@maelys.muapro" target="_blank" rel="noopener" class="reseau-link">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.77a4.84 4.84 0 01-1.01-.08z"/></svg>
         TikTok
       </a>
-      <a href="#" target="_blank" rel="noopener" class="reseau-link">
+      <a href="https://www.threads.com/@maelys.muapro" target="_blank" rel="noopener" class="reseau-link">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.593 0C5.64 0 0 5.234 0 11.692c0 3.962 2.01 7.47 5.133 9.695V24l4.614-2.695a13.23 13.23 0 003.846.57c6.953 0 12.593-5.234 12.593-11.692C26.186 4.413 19.546 0 12.593 0zm1.338 15.75l-3.116-3.37-6.07 3.37 6.67-7.126 3.116 3.37 6.068-3.37-6.668 7.126z"/></svg>
         Threads
       </a>
-      <a href="#" target="_blank" rel="noopener" class="reseau-link">
+      <a href="https://www.linkedin.com/in/ma%C3%ABlys-chaveroux-3a135b270/" target="_blank" rel="noopener" class="reseau-link">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         LinkedIn
       </a>
-      <a href="#" target="_blank" rel="noopener" class="reseau-link">
+      <a href="https://linktr.ee/maelyschaveroux.pro" target="_blank" rel="noopener" class="reseau-link">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
         Linktree
       </a>
@@ -1239,7 +1275,7 @@
 <footer>
   <div class="footer-logo">Maelys Chaveroux — Makeup Artist</div>
   <div class="footer-legal">
-    © 2025 Maelys Chaveroux · Tous droits réservés
+    © 2026 Maelys Chaveroux · Tous droits réservés
     <br>
     <a href="#" onclick="openModal('mentions');return false;">Mentions légales</a>
     <span class="footer-sep">·</span>
@@ -1275,8 +1311,8 @@
     <p>Maelys Chaveroux — Auto-entrepreneur / [Forme juridique à compléter]<br>
     Adresse : [Votre adresse — à compléter]<br>
     SIRET : [Votre SIRET — à compléter]<br>
-    Email : contact@maelyschaverouxmua.com<br>
-    Téléphone : +33 6 00 00 00 00</p>
+    Email : maelyschaveroux.pro@gmail.com<br>
+    Téléphone : +33 6 84 89 25 79</p>
     <h3>Hébergement</h3>
     <p>[Nom de votre hébergeur — à compléter]<br>[Adresse de l'hébergeur]</p>
     <h3>Propriété intellectuelle</h3>
@@ -1297,9 +1333,9 @@
     <h3>Cookies</h3>
     <p>Ce site n'utilise pas de cookies de traçage ou publicitaires. Des cookies techniques peuvent être utilisés pour le bon fonctionnement du site.</p>
     <h3>Vos droits (RGPD)</h3>
-    <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification et de suppression de vos données personnelles. Pour exercer ces droits, contactez : contact@maelyschaverouxmua.com</p>
+    <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification et de suppression de vos données personnelles. Pour exercer ces droits, contactez : maelyschaveroux.pro@gmail.com</p>
     <h3>Responsable du traitement</h3>
-    <p>Maelys Chaveroux — [Votre adresse]<br>contact@maelyschaverouxmua.com</p>
+    <p>Maelys Chaveroux — [Votre adresse]<br>maelyschaveroux.pro@gmail.com</p>
   </div>
 </div>
 
