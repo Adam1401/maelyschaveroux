@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maelys Chaveroux — Makeup Artist | Bordeaux & Toulouse</title>
-<meta name="description" content="Maelys Chaveroux, Makeup Artist professionnelle en Nouvelle-Aquitaine. Spécialiste maquillage mariage et shooting photo à Bordeaux et Toulouse.">
+<title>Maelys Chaveroux — Makeup Artist | Bordeaux</title>
+<meta name="description" content="Maelys Chaveroux, Makeup Artist professionnelle en Nouvelle-Aquitaine. Spécialiste maquillage mariage et shooting photo à Bordeaux.">
 <meta name="keywords" content="makeup artist, maquillage mariage, maquillage shooting, Bordeaux, Toulouse, Nouvelle-Aquitaine, maquilleuse professionnelle">
 <meta property="og:title" content="Maelys Chaveroux — Makeup Artist">
-<meta property="og:description" content="Maquillage mariage & shooting en Nouvelle-Aquitaine. Bordeaux · Toulouse.">
+<meta property="og:description" content="Maquillage mariage & shooting en Nouvelle-Aquitaine. Bordeaux.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,14 +15,17 @@
 
 <style>
   :root {
-    --bordeaux: #3B1417;
+    /* Palette recalée sur les couleurs exactes du nouveau logo */
+    --bordeaux: #3D1216;
     --bordeaux-mid: #5A1520;
     --bordeaux-light: #7A2535;
-    --cream: #F5EFE6;
-    --cream-dark: #D1C7BE;
-    --cream-mid: #D4C4B0;
+    --cream: #F3EAE0;
+    --cream-dark: #E4D5C5;
+    --cream-mid: #D8C7B4;
     --gold: #C9A96E;
     --gold-light: #E8D5B0;
+    /* Ton doré foncé : utilisé sur fonds clairs pour rester lisible (contraste AA) */
+    --gold-deep: #6B4A22;
     --text-dark: #1A0608;
     --text-light: #F5EFE6;
     --font-serif: 'Cormorant Garamond', Georgia, serif;
@@ -50,20 +53,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1.5rem;
-    background: rgba(61, 12, 17, 0.96);
+    padding: 0.85rem 1.5rem;
+    background: rgba(214, 200, 189);
+    box-shadow: 0 1px 0 rgba(61,18,22,0.08);
     backdrop-filter: blur(8px);
     transition: padding 0.3s;
   }
-  nav.scrolled { padding: 0.6rem 1.5rem; }
+  nav.scrolled { padding: 0.5rem 1.5rem; }
   .nav-logo {
-    font-family: var(--font-serif);
-    font-size: 1.15rem;
-    font-weight: 400;
-    color: var(--cream);
-    letter-spacing: 0.12em;
+    display: flex;
+    align-items: center;
     text-decoration: none;
+    line-height: 0;
   }
+  .nav-logo-img {
+    height: 42px;
+    width: auto;
+    display: block;
+    transition: height 0.3s;
+    /* ── Remplacez /Images/logo-maelys.png par votre logo PNG (fond transparent, encre bordeaux) ── */
+  }
+  nav.scrolled .nav-logo-img { height: 34px; }
   .nav-toggle {
     display: flex;
     flex-direction: column;
@@ -77,7 +87,7 @@
     display: block;
     width: 22px;
     height: 1px;
-    background: var(--cream);
+    background: var(--bordeaux);
     transition: all 0.3s;
   }
   .nav-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
@@ -88,7 +98,7 @@
     display: none;
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: var(--bordeaux);
+    background: rgba(214, 200, 189);
     z-index: 99;
     flex-direction: column;
     justify-content: center;
@@ -100,7 +110,7 @@
     font-family: var(--font-serif);
     font-size: 2rem;
     font-weight: 300;
-    color: var(--cream);
+    color: var(--bordeaux);
     text-decoration: none;
     letter-spacing: 0.08em;
     transition: color 0.2s;
@@ -140,7 +150,7 @@
     font-size: 0.65rem;
     font-weight: 400;
     letter-spacing: 0.3em;
-    color: var(--gold);
+    color: var(--text-light);
     text-transform: uppercase;
     margin-bottom: 1rem;
   }
@@ -149,16 +159,16 @@
     font-size: clamp(3rem, 12vw, 5.5rem);
     font-weight: 300;
     line-height: 1.0;
-    color: var(--cream);
+    color: var(--gold);
     margin-bottom: 1.2rem;
     letter-spacing: -0.01em;
   }
-  .hero-title em { font-style: italic; color: var(--gold-light); }
+  .hero-title em { font-style: italic; color: var(--text-light); }
   .hero-subtitle {
     font-size: 0.75rem;
     font-weight: 300;
     letter-spacing: 0.25em;
-    color: var(--cream-dark);
+    color: var(--text-light);
     text-transform: uppercase;
     margin-bottom: 2.5rem;
   }
@@ -206,10 +216,11 @@
   section { padding: 5rem 1.5rem; }
   .section-label {
     font-size: 0.6rem;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 0.35em;
     text-transform: uppercase;
-    color: var(--gold);
+    /* gold-deep : lisible sur les fonds clairs (cream / cream-dark) — le gold clair reste réservé aux fonds bordeaux */
+    color: var(--gold-deep);
     margin-bottom: 0.75rem;
   }
   .section-title {
@@ -674,18 +685,19 @@
     font-size: 0.6rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--gold-deep);
+    font-weight: 500;
   }
   .contact-item a, .contact-item span {
-    font-size: 0.9rem;
-    color: var(--gold);
+    font-size: 0.95rem;
+    color: var(--bordeaux);
     text-decoration: none;
-    font-weight: 300;
+    font-weight: 400;
   }
-  .contact-item a:hover { color: var(--gold); }
+  .contact-item a:hover { color: var(--bordeaux-light); }
   .contact-cta {
     display: inline-block;
-    background: var(--bordeaux);
+    background: var(--cream-mid);
     color: var(--cream);
     font-size: 0.65rem;
     font-weight: 400;
@@ -696,7 +708,37 @@
     transition: background 0.2s;
     text-align: center;
   }
-  .contact-cta:hover { background: var(--bordeaux-light); }
+  .contact-cta:hover { background: var(--cream); }
+
+  /* ── GOOGLE FORM ── */
+  .contact-form-wrap { margin-top: 1rem; }
+  .form-placeholder {
+    border: 1px dashed var(--bordeaux-light);
+    background: rgba(61,18,22,0.03);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+  }
+  .form-placeholder-title {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--bordeaux);
+    margin-bottom: 0.5rem;
+  }
+  .form-placeholder-text {
+    font-size: 0.75rem;
+    color: #5a3030;
+    line-height: 1.7;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+  .google-form-embed {
+    width: 100%;
+    min-height: 900px;
+    border: none;
+    display: block;
+    background: var(--cream);
+  }
   .zone-info {
     font-size: 0.75rem;
     color: #5a3030;
@@ -759,11 +801,12 @@
   }
   .footer-legal {
     font-size: 0.65rem;
-    color: rgba(245,239,230,0.35);
+    color: rgba(245,239,230,0.55);
     line-height: 2;
     letter-spacing: 0.05em;
   }
-  .footer-legal a { color: rgba(245,239,230,0.35); text-decoration: none; }
+  .footer-legal a { color: rgba(245,239,230,0.55); text-decoration: none; }
+  .footer-legal a:hover { color: var(--gold-light); }
   .footer-sep { margin: 0 0.5rem; }
 
   /* ── MENTIONS LÉGALES MODAL ── */
@@ -854,7 +897,9 @@
 
 <!-- NAV -->
 <nav id="main-nav">
-  <a href="#accueil" class="nav-logo">MC</a>
+  <a href="#accueil" class="nav-logo">
+    <img src="Images/logo-maelys.png" alt="Maelys Chaveroux — Makeup Artist" class="nav-logo-img">
+  </a>
   <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
@@ -863,9 +908,7 @@
 <div class="nav-menu" id="nav-menu">
   <a href="#accueil" class="nav-link">Accueil</a>
   <a href="#apropos" class="nav-link">À propos</a>
-  <a href="#prestations" class="nav-link">Prestations</a>
   <a href="#portfolio" class="nav-link">Portfolio</a>
-  <a href="#avis" class="nav-link">Avis</a>
   <a href="#contact" class="nav-link">Contact</a>
 </div>
 
@@ -876,7 +919,7 @@
   <div class="hero-content">
     <p class="hero-eyebrow">Makeup Artist — Nouvelle-Aquitaine</p>
     <h1 class="hero-title">Maelys<br><em>Chaveroux</em></h1>
-    <p class="hero-subtitle">Bordeaux &nbsp;·&nbsp; Toulouse</p>
+    <p class="hero-subtitle">Bordeaux</p>
     <a href="#contact" class="hero-cta">Prendre rendez-vous &nbsp;→</a>
   </div>
   <div class="hero-scroll">
@@ -908,141 +951,11 @@
         </p>
       </div>
 
-      <!--<div class="valeurs-grid">
-        <div class="valeur-card">
-          <h4>Sur-mesure</h4>
-          <p>Chaque visage est unique. Chaque prestation est pensée pour vous et pour vous seul(e).</p>
-        </div>
-        <div class="valeur-card">
-          <h4>Excellence</h4>
-          <p>Produits professionnels haut de gamme, techniques affinées, résultat photographique.</p>
-        </div>
-        <div class="valeur-card">
-          <h4>Sérénité</h4>
-          <p>Un moment de détente avant l'essentiel. Je crée une atmosphère calme et bienveillante.</p>
-        </div>
-        <div class="valeur-card">
-          <h4>Durabilité</h4>
-          <p>Des formules longue tenue, testées pour tenir toute la journée et toute la nuit.</p>
-        </div>
-      </div>-->
-
       <ul class="certif-list" style="margin-top:2rem">
         <li>BTS esthétique Silvya Terrade (Bordeaux - 2025)</li>
         <li>Formation maquillage Backstage Academie  (Toulouse - 2026)</li>
       </ul>
     </div>
-  </div>
-</section>
-
-<!-- PRESTATIONS -->
-<section id="prestations">
-  <p class="section-label">Mes prestations</p>
-  <h2 class="section-title" style="color:var(--cream)">Des formules<br>pensées pour<br>vous</h2>
-  <div class="divider"></div>
-  <div class="presta-tabs">
-    <button class="presta-tab active" data-tab="mariage">Mariage</button>
-    <button class="presta-tab" data-tab="shooting">Shooting</button>
-  </div>
-
-  <!-- MARIAGE -->
-  <div class="presta-panel active" id="tab-mariage">
-    <div class="presta-panels-grid">
-      <div class="formule-card">
-        <div class="formule-name">Essentielle</div>
-        <div class="formule-price">À partir de 250 €</div>
-        <div class="formule-desc">La formule pour sublimer la mariée le jour J avec un maquillage longue tenue soigné.</div>
-        <ul class="formule-includes">
-          <li>Maquillage de la mariée</li>
-          <li>Essai maquillage inclus</li>
-          <li>Produits professionnels haut de gamme</li>
-          <li>Retouches en fin de prestation</li>
-        </ul>
-      </div>
-
-      <div class="formule-card featured">
-        <div class="formule-badge">La plus choisie</div>
-        <div class="formule-name">Précieuse</div>
-        <div class="formule-price">Sur devis</div>
-        <div class="formule-desc">Mariée + cortège. Une journée entière prise en charge, du coiffage aux retouches.</div>
-        <ul class="formule-includes">
-          <li>Maquillage mariée + 2 personnes du cortège</li>
-          <li>Essai maquillage inclus</li>
-          <li>Présence jusqu'au début de la cérémonie</li>
-          <li>Kit retouches offert</li>
-          <li>Déplacement inclus (région)</li>
-        </ul>
-      </div>
-
-      <div class="formule-card">
-        <div class="formule-name">Sublime</div>
-        <div class="formule-price">Sur devis</div>
-        <div class="formule-desc">Formule complète pour un grand mariage. Accompagnement du début à la fin de la journée.</div>
-        <ul class="formule-includes">
-          <li>Maquillage mariée + cortège complet</li>
-          <li>Présence toute la journée</li>
-          <li>Retouches en continu</li>
-          <li>Essai + consultation personnalisée</li>
-          <li>Déplacement inclus (France)</li>
-        </ul>
-      </div>
-
-      <div class="formule-card">
-        <div class="formule-name">Demoiselle d'honneur</div>
-        <div class="formule-price">Sur devis</div>
-        <div class="formule-desc">Maquillage individuel pour les demoiselles d'honneur ou invitées. Tarif à l'unité.</div>
-        <ul class="formule-includes">
-          <li>Maquillage longue tenue</li>
-          <li>Adapté au thème du mariage</li>
-          <li>Produits professionnels</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <!-- SHOOTING -->
-  <div class="presta-panel" id="tab-shooting">
-    <div class="presta-panels-grid">
-      <div class="formule-card">
-        <div class="formule-name">Portrait</div>
-        <div class="formule-price">À partir de 180 €</div>
-        <div class="formule-desc">Shooting personnel, portrait ou lifestyle. Maquillage naturel ou éditorial selon la direction artistique.</div>
-        <ul class="formule-includes">
-          <li>Jusqu'à 3h de shooting</li>
-          <li>1 look maquillage</li>
-          <li>Brief et consultation en amont</li>
-        </ul>
-      </div>
-
-      <div class="formule-card featured">
-        <div class="formule-badge">Recommandée</div>
-        <div class="formule-name">Éditorial</div>
-        <div class="formule-price">Sur devis</div>
-        <div class="formule-desc">Pour les shootings mode, lookbook ou campagnes. Plusieurs looks, collaboration avec le photographe.</div>
-        <ul class="formule-includes">
-          <li>Journée complète (jusqu'à 8h)</li>
-          <li>2 à 4 looks maquillage</li>
-          <li>Collaboration artistique incluse</li>
-          <li>Retouches entre chaque look</li>
-        </ul>
-      </div>
-
-      <div class="formule-card">
-        <div class="formule-name">Publicitaire</div>
-        <div class="formule-price">Sur devis</div>
-        <div class="formule-desc">Tournages, vidéos corporate, campagnes publicitaires. Prestation adaptée aux contraintes de production.</div>
-        <ul class="formule-includes">
-          <li>Devis sur mesure selon le projet</li>
-          <li>Adaptation aux contraintes de tournage</li>
-          <li>Disponibilité sur plusieurs jours</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="devis-note">
-    <strong>Vous ne savez pas quelle formule choisir ?</strong><br>
-    Chaque projet est unique. Contactez-moi pour un devis personnalisé et gratuit — je vous accompagne vers la formule qui vous correspond.
   </div>
 </section>
 
@@ -1170,39 +1083,6 @@
   </div>
 </section>
 
-<!-- AVIS -->
-<section id="avis">
-  <p class="section-label">Témoignages</p>
-  <h2 class="section-title">Ce qu'elles<br>en disent</h2>
-  <div class="divider"></div>
-  <div class="avis-grid">
-    <div class="avis-card fade-in">
-      <div class="avis-stars">★★★★★</div>
-      <p class="avis-text">« Maelys a su exactement ce que je voulais pour mon mariage. Le maquillage était parfait toute la journée, naturel et sublimant. Je la recommande les yeux fermés ! »</p>
-      <span class="avis-author">— Sophie M. · Mariée · Bordeaux</span>
-    </div>
-    <div class="avis-card fade-in">
-      <div class="avis-stars">★★★★★</div>
-      <p class="avis-text">« Professionnalisme, douceur et talent. Maelys a transformé notre shooting en quelque chose de magique. Les photos sont époustouflantes. »</p>
-      <span class="avis-author">— Julie R. · Photographe · Toulouse</span>
-    </div>
-    <div class="avis-card fade-in">
-      <div class="avis-stars">★★★★★</div>
-      <p class="avis-text">« Un grand merci à Maelys pour avoir maquillé toute mon équipe le jour J. Elle était calme, rapide et le résultat était absolument magnifique sur les photos. »</p>
-      <span class="avis-author">— Clara B. · Mariée · Arcachon</span>
-    </div>
-    <div class="avis-card fade-in">
-      <div class="avis-stars">★★★★★</div>
-      <p class="avis-text">« Je lui fais confiance pour tous mes shootings publicitaires. Elle comprend la direction artistique instantanément et livre toujours au-delà des attentes. »</p>
-      <span class="avis-author">— Antoine D. · Directeur Artistique</span>
-    </div>
-  </div>
-  <div class="avis-google-link">
-    <!-- Remplacez le # par votre lien Google My Business -->
-    <a href="#" target="_blank" rel="noopener">Voir tous les avis Google &nbsp;→</a>
-  </div>
-</section>
-
 <!-- CONTACT -->
 <section id="contact">
   <p class="section-label">Contact</p>
@@ -1213,7 +1093,7 @@
       <p class="contact-intro">Chaque projet est unique. Contactez-moi pour échanger sur vos besoins et recevoir un devis personnalisé, sans engagement.</p>
       <div class="zone-info" style="margin-top:2rem">
         <strong style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:400">Zone d'intervention</strong><br>
-        Nouvelle-Aquitaine · Bordeaux · Toulouse<br>
+        Nouvelle-Aquitaine · Bordeaux<br>
         Déplacement possible sur toute la France sur demande.
       </div>
     </div>
@@ -1233,7 +1113,8 @@
       </div>
     </div>
   </div>
-</section>
+
+  <div>  &nbsp; </div>
 
 <!-- RÉSEAUX -->
 <section id="reseaux">
