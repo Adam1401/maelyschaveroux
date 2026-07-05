@@ -3,12 +3,85 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maelys Chaveroux — Makeup Artist | Bordeaux</title>
-<meta name="description" content="Maelys Chaveroux, Makeup Artist professionnelle en Nouvelle-Aquitaine. Spécialiste maquillage mariage et shooting photo à Bordeaux.">
-<meta name="keywords" content="makeup artist, maquillage mariage, maquillage shooting, Bordeaux, Toulouse, Nouvelle-Aquitaine, maquilleuse professionnelle">
-<meta property="og:title" content="Maelys Chaveroux — Makeup Artist">
-<meta property="og:description" content="Maquillage mariage & shooting en Nouvelle-Aquitaine. Bordeaux.">
+<title>Maelys Chaveroux — Makeup Artist Mariage & Shooting | Bordeaux</title>
+<meta name="description" content="Maelys Chaveroux, Makeup Artist professionnelle en Nouvelle-Aquitaine. Spécialiste maquillage mariage et shooting photo à Bordeaux. Formules sur-mesure, résultat longue tenue.">
+<meta name="keywords" content="makeup artist Bordeaux, maquilleuse mariage Bordeaux, maquillage shooting Bordeaux, makeup artist, maquilleuse professionnelle Nouvelle-Aquitaine, maquillage mariée, maquilleuse mariage Gironde">
+<meta name="author" content="Maelys Chaveroux">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.maelyschaverouxmua.com/">
+
+<!-- Géolocalisation -->
+<meta name="geo.region" content="FR-NAQ">
+<meta name="geo.placename" content="Bordeaux, Nouvelle-Aquitaine">
+
+<!-- Open Graph (Facebook, WhatsApp, LinkedIn...) -->
+<meta property="og:title" content="Maelys Chaveroux — Makeup Artist | Bordeaux">
+<meta property="og:description" content="Maquillage mariage & shooting en Nouvelle-Aquitaine. Formules sur-mesure, résultat longue tenue. Bordeaux.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://www.maelyschaverouxmua.com/">
+<meta property="og:image" content="https://www.maelyschaverouxmua.com/Images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Maelys Chaveroux Makeup Artist">
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Maelys Chaveroux — Makeup Artist | Bordeaux">
+<meta name="twitter:description" content="Maquillage mariage & shooting en Nouvelle-Aquitaine. Formules sur-mesure, résultat longue tenue.">
+<meta name="twitter:image" content="https://www.maelyschaverouxmua.com/Images/og-image.jpg">
+
+<!-- Données structurées JSON-LD (Google Rich Results) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Maelys Chaveroux — Makeup Artist",
+  "description": "Makeup Artist professionnelle spécialisée en maquillage mariage et shooting photo en Nouvelle-Aquitaine. Intervient principalement à Bordeaux.",
+  "url": "https://www.maelyschaverouxmua.com/",
+  "telephone": "+33684892579",
+  "email": "maelyschaveroux.pro@gmail.com",
+  "image": "https://www.maelyschaverouxmua.com/Images/og-image.jpg",
+  "priceRange": "€€€",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bordeaux",
+    "addressRegion": "Nouvelle-Aquitaine",
+    "addressCountry": "FR"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Bordeaux" },
+    { "@type": "AdministrativeArea", "name": "Nouvelle-Aquitaine" }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/maelyschaveroux.mua/",
+    "https://linktr.ee/maelyschaveroux.pro",
+    "https://www.linkedin.com/in/ma%C3%ABlys-chaveroux-3a135b270/"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Prestations maquillage",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Maquillage mariage",
+          "description": "Maquillage longue tenue pour mariées et cortège. Formules Essentielle, Précieuse et Sublime."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Maquillage shooting photo",
+          "description": "Maquillage pour shootings portrait, éditoriaux et publicitaires."
+        }
+      }
+    ]
+  }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
@@ -535,10 +608,20 @@
     justify-content: center;
     position: relative;
     overflow: hidden;
+    min-height: 0; /* crucial : permet au flex-child de rétrécir */
+  }
+  #lightbox-img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
   }
   .lightbox-img {
     max-width: 100%;
     max-height: 100%;
+    width: auto;
+    height: auto;
     object-fit: contain;
     display: block;
   }
@@ -880,8 +963,14 @@
       align-items: start;
     }
     .apropos-photo-wrap { margin-bottom: 0; }
-    .portfolio-grid { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-    .portfolio-pack.wide { grid-column: span 2; }
+    .portfolio-grid {
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 420px;
+      gap: 1rem;
+    }
+    /* Les cartes simples et larges ont toutes la même hauteur de ligne */
+    .portfolio-pack { aspect-ratio: unset; height: 100%; }
+    .portfolio-pack.wide { grid-column: span 2; aspect-ratio: unset; height: 100%; }
     .avis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
     .presta-panels-grid {
       display: grid;
@@ -1080,6 +1169,59 @@
         <span class="pack-count">1 photo</span>
       </div>
     </div>
+
+    <div class="portfolio-pack"
+      data-pack-title="Amelie"
+      data-pack-type="Shooting · Beauté"
+      data-images='["Images/amelie1.jpeg","Images/amelie2.jpeg"]'
+      onclick="openLightbox(this)">
+      <img src="Images/amelie1.jpeg" alt="Amelie" class="portfolio-cover">
+      <div class="portfolio-pack-overlay">
+        <span class="pack-label">Shooting · Beauté</span>
+        <span class="pack-title">Amelie</span>
+        <span class="pack-count">2 photos</span>
+      </div>
+    </div>
+
+    <div class="portfolio-pack"
+      data-pack-title="Manon"
+      data-pack-type="Shooting · Beauté"
+      data-images='["Images/manon3.jpeg","Images/manon4.jpeg"]'
+      onclick="openLightbox(this)">
+      <img src="Images/manon3.jpeg" alt="Manon" class="portfolio-cover">
+      <div class="portfolio-pack-overlay">
+        <span class="pack-label">Shooting · Beauté</span>
+        <span class="pack-title">Manon</span>
+        <span class="pack-count">2 photos</span>
+      </div>
+    </div>
+
+    <div class="portfolio-pack"
+      data-pack-title="Srey-nit"
+      data-pack-type="Shooting · Beauté"
+      data-images='["Images/srey-nit1.jpeg","Images/srey-nit2.jpeg"]'
+      onclick="openLightbox(this)">
+      <img src="Images/srey-nit1.jpeg" alt="Srey-nit" class="portfolio-cover">
+      <div class="portfolio-pack-overlay">
+        <span class="pack-label">Shooting · Beauté</span>
+        <span class="pack-title">Srey-nit</span>
+        <span class="pack-count">2 photos</span>
+      </div>
+    </div>
+
+    <div class="portfolio-pack"
+      data-pack-title="Manon"
+      data-pack-type="Shooting · Beauté · Publicitaire"
+      data-images='["Images/manon5.jpeg","Images/manon7.jpeg","Images/manon6.jpeg"]'
+      onclick="openLightbox(this)">
+      <img src="Images/manon5.jpeg" alt="Manon" class="portfolio-cover">
+      <div class="portfolio-pack-overlay">
+        <span class="pack-label">Shooting · Beauté · Publicitaire</span>
+        <span class="pack-title">Manon</span>
+        <span class="pack-count">3 photos</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
