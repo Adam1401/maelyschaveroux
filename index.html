@@ -88,19 +88,18 @@
 
 <style>
   :root {
-    /* Palette recalée sur les couleurs exactes du nouveau logo */
-    --bordeaux: #3D1216;
-    --bordeaux-mid: #5A1520;
-    --bordeaux-light: #7A2535;
-    --cream: #F3EAE0;
-    --cream-dark: #E4D5C5;
-    --cream-mid: #D8C7B4;
-    --gold: #C9A96E;
-    --gold-light: #E8D5B0;
-    /* Ton doré foncé : utilisé sur fonds clairs pour rester lisible (contraste AA) */
-    --gold-deep: #6B4A22;
-    --text-dark: #1A0608;
-    --text-light: #F5EFE6;
+    /* Palette harmonieuse et sobre basée sur les couleurs choisies */
+    --bordeaux: #392a20;
+    --bordeaux-mid: #8B6B50;
+    --bordeaux-light: #A5866D;
+    --cream: #F6F0EA;
+    --cream-dark: #EEE3DA;
+    --cream-mid: #CEC3BC;
+    --gold: #6B4B35;
+    --gold-light: #E7D9CC;
+    --gold-deep: #493224;
+    --text-dark: #000000;
+    --text-light: #F6F0EA;
     --font-serif: 'Cormorant Garamond', Georgia, serif;
     --font-sans: 'Jost', sans-serif;
   }
@@ -127,8 +126,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.85rem 1.5rem;
-    background: rgba(214, 200, 189);
-    box-shadow: 0 1px 0 rgba(61,18,22,0.08);
+    background: var(--cream-dark);
+    box-shadow: 0 1px 0 rgba(107,75,53,0.16);
     backdrop-filter: blur(8px);
     transition: padding 0.3s;
   }
@@ -171,7 +170,7 @@
     display: none;
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(214, 200, 189);
+    background: var(--cream-dark);
     z-index: 99;
     flex-direction: column;
     justify-content: center;
@@ -205,7 +204,7 @@
     position: absolute;
     inset: 0;
     /* ── REMPLACER PAR VOTRE PHOTO DE FOND : background-image: url('votre-photo-hero.jpg'); ── */
-    background-image: url('Images/Couverture.jpeg'); /*linear-gradient(160deg, #5A1520 0%, #3D0C11 60%, #1A0608 100%);*/
+    /*background-image: url('Images/Couverture.jpeg'); /*linear-gradient(160deg, #5A1520 0%, #3D0C11 60%, #1A0608 100%);*/
     background-size: cover;
     background-position: center top;
     opacity: 0.55;
@@ -213,9 +212,7 @@
   .hero-overlay {
     position: absolute;
     inset: 0;
-    /*background: linear-gradient(to top, rgba(209,199,190,0.2) 0%, rgba(209,199,190,0.1) 60%, transparent 100%);
-    /*    background: linear-gradient(to top, rgba(61,12,17,0.92) 0%, rgba(61,12,17,0.3) 60%, transparent 100%);*/
-
+    /*background: linear-gradient(135deg, rgba(0,0,0,0.42) 0%, rgba(107,75,53,0.28) 45%, rgba(246,240,234,0.12) 100%);*/
   }
   .hero-content { position: relative; z-index: 2; }
   .hero-eyebrow {
@@ -232,11 +229,11 @@
     font-size: clamp(3rem, 12vw, 5.5rem);
     font-weight: 300;
     line-height: 1.0;
-    color: var(--gold);
+    color: var(--cream-mid);
     margin-bottom: 1.2rem;
     letter-spacing: -0.01em;
   }
-  .hero-title em { font-style: italic; color: var(--text-light); }
+  .hero-title em { font-style: italic; color: var(--cream-mid); }
   .hero-subtitle {
     font-size: 0.75rem;
     font-weight: 300;
@@ -333,18 +330,18 @@
   .photo-placeholder {
     width: 100%;
     height: 100%;
-    background: var(--bordeaux-mid);
+    background: var(--cream-dark);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    color: var(--cream-mid);
+    color: var(--bordeaux);
   }
   .photo-placeholder p { font-size: 0.65rem; letter-spacing: 0.15em; text-align: center; padding: 0 1rem; }
   .apropos-text p {
     font-size: 0.9rem;
-    color: #3a2020;
+    color: var(--text-dark);
     margin-bottom: 1.2rem;
     line-height: 1.8;
   }
@@ -360,7 +357,7 @@
     align-items: flex-start;
     gap: 0.75rem;
     font-size: 0.8rem;
-    color: #3a2020;
+    color: var(--bordeaux);
   }
   .certif-list li::before {
     content: '';
@@ -389,7 +386,7 @@
     color: var(--bordeaux);
     margin-bottom: 0.3rem;
   }
-  .valeur-card p { font-size: 0.75rem; color: #5a3030; line-height: 1.6; }
+  .valeur-card p { font-size: 0.75rem; color: var(--text-dark); line-height: 1.6; }
 
   /* ── PRESTATIONS ── */
   #prestations { background: var(--bordeaux); }
@@ -420,8 +417,8 @@
   .presta-panel { display: none; }
   .presta-panel.active { display: block; }
   .formule-card {
-    background: rgba(245,239,230,0.06);
-    border: 1px solid rgba(201,169,110,0.25);
+    background: rgba(246,240,234,0.08);
+    border: 1px solid rgba(107,75,53,0.25);
     padding: 1.75rem 1.5rem;
     margin-bottom: 1rem;
     position: relative;
@@ -485,7 +482,7 @@
   .devis-note {
     margin-top: 2rem;
     padding: 1.25rem 1.5rem;
-    border: 1px solid rgba(201,169,110,0.2);
+    border: 1px solid rgba(107,75,53,0.2);
     font-size: 0.8rem;
     color: var(--cream-mid);
     line-height: 1.7;
@@ -494,7 +491,7 @@
   .devis-note strong { color: var(--gold); font-weight: 400; }
 
   /* ── PORTFOLIO ── */
-  #portfolio { background: var(--cream); }
+  #portfolio { background: var(--cream-mid); }
   .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -523,7 +520,7 @@
   .portfolio-pack-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(61,12,17,0.85) 0%, transparent 55%);
+    background: linear-gradient(to top, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.12) 55%, transparent 100%);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -534,7 +531,7 @@
     font-size: 0.55rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--cream-dark);
     margin-bottom: 0.2rem;
   }
   .pack-title {
@@ -554,13 +551,13 @@
   .pack-photo-placeholder {
     width: 100%;
     height: 100%;
-    background: var(--bordeaux-mid);
+    background: var(--cream-dark);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    color: var(--cream-mid);
+    color: var(--bordeaux);
   }
   .pack-photo-placeholder p {
     font-size: 0.6rem;
@@ -575,7 +572,7 @@
     position: fixed;
     inset: 0;
     z-index: 200;
-    background: rgba(26,6,8,0.97);
+    background: rgba(0,0,0,0.95);
     flex-direction: column;
   }
   .lightbox.open { display: flex; }
@@ -629,11 +626,11 @@
     width: 80vw;
     max-width: 500px;
     aspect-ratio: 3/4;
-    background: var(--bordeaux-mid);
+    background: var(--cream-dark);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--cream-mid);
+    color: var(--bordeaux);
     font-size: 0.75rem;
     letter-spacing: 0.1em;
     text-align: center;
@@ -643,7 +640,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(61,12,17,0.6);
+    background: rgba(107,75,53,0.72);
     border: none;
     color: var(--cream);
     font-size: 1.5rem;
@@ -678,8 +675,8 @@
   .lightbox-thumb-placeholder {
     width: 48px;
     height: 48px;
-    background: var(--bordeaux-light);
-    opacity: 0.5;
+    background: var(--cream-dark);
+    opacity: 0.7;
     flex-shrink: 0;
     cursor: pointer;
     border: 1px solid transparent;
@@ -707,8 +704,8 @@
     margin-top: 2rem;
   }
   .avis-card {
-    background: rgba(245,239,230,0.06);
-    border: 1px solid rgba(201,169,110,0.18);
+    background: rgba(246,240,234,0.08);
+    border: 1px solid rgba(246,240,234,0.18);
     padding: 1.5rem;
   }
   .avis-stars { color: var(--gold); font-size: 0.75rem; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
@@ -738,9 +735,9 @@
     font-size: 0.65rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--cream-mid);
+    color: var(--cream);
     text-decoration: none;
-    border-bottom: 1px solid rgba(201,169,110,0.3);
+    border-bottom: 1px solid rgba(246,240,234,0.3);
     padding-bottom: 4px;
     transition: color 0.2s;
   }
@@ -759,7 +756,7 @@
     font-size: 1.15rem;
     font-weight: 300;
     font-style: italic;
-    color: var(--bordeaux-mid);
+    color: var(--text-dark);
     line-height: 1.7;
   }
   .contact-items { display: flex; flex-direction: column; gap: 1.25rem; }
@@ -773,15 +770,15 @@
   }
   .contact-item a, .contact-item span {
     font-size: 0.95rem;
-    color: var(--bordeaux);
+    color: var(--text-dark);
     text-decoration: none;
     font-weight: 400;
   }
-  .contact-item a:hover { color: var(--bordeaux-light); }
+  /* .contact-item a:hover { color: var(--bordeaux-light); } */
+
   .contact-cta {
     display: inline-block;
     background: var(--cream-mid);
-    color: var(--cream);
     font-size: 0.65rem;
     font-weight: 400;
     letter-spacing: 0.25em;
@@ -791,13 +788,13 @@
     transition: background 0.2s;
     text-align: center;
   }
-  .contact-cta:hover { background: var(--cream); }
+  /*.contact-cta:hover { background: var(--gold-deep); }*/
 
   /* ── GOOGLE FORM ── */
   .contact-form-wrap { margin-top: 1rem; }
   .form-placeholder {
     border: 1px dashed var(--bordeaux-light);
-    background: rgba(61,18,22,0.03);
+    background: rgba(246,240,234,0.7);
     padding: 2.5rem 1.5rem;
     text-align: center;
   }
@@ -810,7 +807,7 @@
   }
   .form-placeholder-text {
     font-size: 0.75rem;
-    color: #5a3030;
+    color: var(--text-dark);
     line-height: 1.7;
     max-width: 380px;
     margin: 0 auto;
@@ -824,9 +821,9 @@
   }
   .zone-info {
     font-size: 0.75rem;
-    color: #5a3030;
+    color: var(--text-dark);
     line-height: 1.7;
-    border-left: 2px solid var(--gold);
+    border-left: 2px solid var(--bordeaux);
     padding-left: 1rem;
   }
 
@@ -870,7 +867,7 @@
 
   /* ── FOOTER ── */
   footer {
-    background: var(--text-dark);
+    background: var(--cream-mid);
     padding: 2.5rem 1.5rem;
     text-align: center;
   }
@@ -878,18 +875,18 @@
     font-family: var(--font-serif);
     font-size: 1.3rem;
     font-weight: 300;
-    color: var(--cream-mid);
+    color: var(--text-dark);
     letter-spacing: 0.1em;
     margin-bottom: 1.5rem;
   }
   .footer-legal {
     font-size: 0.65rem;
-    color: rgba(245,239,230,0.55);
+    color: var(--text-dark);
     line-height: 2;
     letter-spacing: 0.05em;
   }
-  .footer-legal a { color: rgba(245,239,230,0.55); text-decoration: none; }
-  .footer-legal a:hover { color: var(--gold-light); }
+  .footer-legal a { color: var(--text-dark); text-decoration: none; }
+  .footer-legal a:hover { color: var(--bordeaux); }
   .footer-sep { margin: 0 0.5rem; }
 
   /* ── MENTIONS LÉGALES MODAL ── */
@@ -898,7 +895,7 @@
     position: fixed;
     inset: 0;
     z-index: 300;
-    background: rgba(26,6,8,0.9);
+    background: rgba(0,0,0,0.85);
     overflow-y: auto;
     padding: 2rem 1rem;
   }
@@ -937,7 +934,7 @@
   }
   .modal-box p {
     font-size: 0.8rem;
-    color: #3a2020;
+    color: var(--text-dark);
     line-height: 1.7;
     margin-bottom: 0.5rem;
   }
@@ -1021,7 +1018,7 @@
 <section id="apropos">
   <div class="apropos-grid">
     <div class="apropos-photo-wrap fade-in">
-      <img src="Images/maelys.jpeg" alt="Maelys Chaveroux Makeup Artist" class="apropos-photo">
+      <!-- <img src="Images/maelys.jpeg" alt="Maelys Chaveroux Makeup Artist" class="apropos-photo"> -->
     </div>
     <div class="fade-in">
       <p class="section-label">À propos</p>
@@ -1053,7 +1050,7 @@
   <p class="section-label">Portfolio</p>
   <h2 class="section-title">Mes réalisations</h2>
   <div class="divider"></div>
-  <p style="font-size:0.8rem;color:#5a3030;line-height:1.7;margin-bottom:1rem">Cliquez sur un projet pour parcourir toutes les photos en galerie.</p>
+  <p style="font-size:0.8rem;color:var(--text-dark);line-height:1.7;margin-bottom:1rem">Cliquez sur un projet pour parcourir toutes les photos en galerie.</p>
 
   <!--
   ══════════════════════════════════════════════════════════
@@ -1234,7 +1231,7 @@
     <div>
       <p class="contact-intro">Chaque projet est unique. Contactez-moi pour échanger sur vos besoins et recevoir un devis personnalisé, sans engagement.</p>
       <div class="zone-info" style="margin-top:2rem">
-        <strong style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:400">Zone d'intervention</strong><br>
+        <strong style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--bordeaux);font-weight:400">Zone d'intervention</strong><br>
         Nouvelle-Aquitaine · Bordeaux<br>
         Déplacement possible sur toute la France sur demande.
       </div>
