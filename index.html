@@ -19,7 +19,7 @@
 <meta property="og:description" content="Maquillage mariage & shooting en Nouvelle-Aquitaine. Formules sur-mesure, résultat longue tenue. Bordeaux.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.maelyschaverouxmua.com/">
-<meta property="og:image" content="https://www.maelyschaverouxmua.com/Images/og-image.jpg">
+<meta property="og:image" content="https://www.maelyschaverouxmua.com/Images/og-image.jpg"> 
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="fr_FR">
@@ -88,18 +88,12 @@
 
 <style>
   :root {
-    /* Palette harmonieuse et sobre basée sur les couleurs choisies */
-    --bordeaux: #392a20;
-    --bordeaux-mid: #8B6B50;
-    --bordeaux-light: #A5866D;
-    --cream: #F6F0EA;
-    --cream-dark: #EEE3DA;
-    --cream-mid: #CEC3BC;
-    --gold: #6B4B35;
-    --gold-light: #E7D9CC;
-    --gold-deep: #493224;
-    --text-dark: #000000;
-    --text-light: #F6F0EA;
+    /* Palette harmonieuse et sobre basée sur les couleurs choisies */    
+    --fonce: #D9D4CE; /* foncé */
+    --clair: #E2E1DD; /*clair*/
+    --gris: #C7C3BE; /* gris*/
+    --text-dark: #000000;/*texte noir*/
+    --text-light: #61605C;/*texte blanc*/
     --font-serif: 'Cormorant Garamond', Georgia, serif;
     --font-sans: 'Jost', sans-serif;
   }
@@ -109,7 +103,7 @@
   html { scroll-behavior: smooth; }
 
   body {
-    background: var(--cream);
+    background: var(--clair);
     color: var(--text-dark);
     font-family: var(--font-sans);
     font-weight: 300;
@@ -126,7 +120,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.85rem 1.5rem;
-    background: var(--cream-dark);
+    background: var(--clair);
     box-shadow: 0 1px 0 rgba(107,75,53,0.16);
     backdrop-filter: blur(8px);
     transition: padding 0.3s;
@@ -159,7 +153,7 @@
     display: block;
     width: 22px;
     height: 1px;
-    background: var(--bordeaux);
+    background: var(--fonce);
     transition: all 0.3s;
   }
   .nav-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
@@ -170,7 +164,7 @@
     display: none;
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: var(--cream-dark);
+    background: var(--clair);
     z-index: 99;
     flex-direction: column;
     justify-content: center;
@@ -182,17 +176,17 @@
     font-family: var(--font-serif);
     font-size: 2rem;
     font-weight: 300;
-    color: var(--bordeaux);
+    color: var(--text-light);
     text-decoration: none;
     letter-spacing: 0.08em;
     transition: color 0.2s;
   }
-  .nav-menu a:hover { color: var(--gold); }
+  .nav-menu a:hover { color: var(--text-dark); }
 
   /* ── HERO ── */
   #accueil {
     min-height: 100svh;
-    background: var(--bordeaux);
+    background: var(--fonce);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -204,15 +198,9 @@
     position: absolute;
     inset: 0;
     /* ── REMPLACER PAR VOTRE PHOTO DE FOND : background-image: url('votre-photo-hero.jpg'); ── */
-    /*background-image: url('Images/Couverture.jpeg'); /*linear-gradient(160deg, #5A1520 0%, #3D0C11 60%, #1A0608 100%);*/
+    /* background-image: url('Images/Couverture.jpeg'); */
     background-size: cover;
     background-position: center top;
-    opacity: 0.55;
-  }
-  .hero-overlay {
-    position: absolute;
-    inset: 0;
-    /*background: linear-gradient(135deg, rgba(0,0,0,0.42) 0%, rgba(107,75,53,0.28) 45%, rgba(246,240,234,0.12) 100%);*/
   }
   .hero-content { position: relative; z-index: 2; }
   .hero-eyebrow {
@@ -229,11 +217,11 @@
     font-size: clamp(3rem, 12vw, 5.5rem);
     font-weight: 300;
     line-height: 1.0;
-    color: var(--cream-mid);
+    color: var(--text-light);
     margin-bottom: 1.2rem;
     letter-spacing: -0.01em;
   }
-  .hero-title em { font-style: italic; color: var(--cream-mid); }
+  .hero-title em { font-style: italic; color: var(--text-light); }
   .hero-subtitle {
     font-size: 0.75rem;
     font-weight: 300;
@@ -250,13 +238,13 @@
     font-weight: 400;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--cream);
+    color: var(--text-light);
     text-decoration: none;
-    border-bottom: 1px solid var(--gold);
+    border-bottom: 1px solid var(--text-light);
     padding-bottom: 4px;
     transition: color 0.2s, border-color 0.2s;
   }
-  .hero-cta:hover { color: var(--gold); }
+  .hero-cta:hover { color: var(--text-light); border-color: var(--text-light); }
   .hero-scroll {
     position: absolute;
     bottom: 2rem;
@@ -270,14 +258,14 @@
   .hero-scroll span {
     font-size: 0.55rem;
     letter-spacing: 0.2em;
-    color: var(--cream-mid);
+    color: var(--text-light);
     text-transform: uppercase;
     writing-mode: vertical-rl;
   }
   .scroll-line {
     width: 1px;
     height: 40px;
-    background: linear-gradient(to bottom, var(--gold), transparent);
+    background: linear-gradient(to bottom, var(--clair), transparent);
     animation: scrollPulse 2s ease-in-out infinite;
   }
   @keyframes scrollPulse { 0%,100%{opacity:0.4;transform:scaleY(1)} 50%{opacity:1;transform:scaleY(1.2)} }
@@ -289,8 +277,7 @@
     font-weight: 500;
     letter-spacing: 0.35em;
     text-transform: uppercase;
-    /* gold-deep : lisible sur les fonds clairs (cream / cream-dark) — le gold clair reste réservé aux fonds bordeaux */
-    color: var(--gold-deep);
+    color: var(--text-dark);
     margin-bottom: 0.75rem;
   }
   .section-title {
@@ -298,18 +285,18 @@
     font-size: clamp(2rem, 8vw, 3rem);
     font-weight: 300;
     line-height: 1.15;
-    color: var(--bordeaux);
+    color: var(--text-dark);
     margin-bottom: 2rem;
   }
   .divider {
     width: 40px;
     height: 1px;
-    background: var(--gold);
+    background: var(--fonce);
     margin: 1.5rem 0;
   }
 
   /* ── À PROPOS ── */
-  #apropos { background: var(--cream-dark); }
+  #apropos { background: var(--clair); }
   .apropos-photo-wrap {
     width: 100%;
     aspect-ratio: 3/4;
@@ -317,31 +304,15 @@
     margin-bottom: 2rem;
     position: relative;
   }
-  .apropos-photo-wrap::after {
-    display: none;
-  }
   .apropos-photo {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    /* ── REMPLACER src PAR VOTRE PHOTO : <img src="photo-maelys.jpg" ...> ── */
   }
-  .photo-placeholder {
-    width: 100%;
-    height: 100%;
-    background: var(--cream-dark);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    color: var(--bordeaux);
-  }
-  .photo-placeholder p { font-size: 0.65rem; letter-spacing: 0.15em; text-align: center; padding: 0 1rem; }
   .apropos-text p {
     font-size: 0.9rem;
-    color: var(--text-dark);
+    color: var(--text-light);
     margin-bottom: 1.2rem;
     line-height: 1.8;
   }
@@ -357,14 +328,14 @@
     align-items: flex-start;
     gap: 0.75rem;
     font-size: 0.8rem;
-    color: var(--bordeaux);
+    color: var(--text-dark);
   }
   .certif-list li::before {
     content: '';
     display: block;
     width: 16px;
     height: 1px;
-    background: var(--gold);
+    background: var(--fonce);
     margin-top: 0.55em;
     flex-shrink: 0;
   }
@@ -375,123 +346,21 @@
     margin-top: 2rem;
   }
   .valeur-card {
-    background: var(--cream);
+    background: var(--clair);
     padding: 1.25rem 1rem;
-    border-left: 2px solid var(--gold);
+    border-left: 2px solid var(--fonce);
   }
   .valeur-card h4 {
     font-family: var(--font-serif);
     font-size: 1rem;
     font-weight: 400;
-    color: var(--bordeaux);
+    color: var(--text-dark);
     margin-bottom: 0.3rem;
   }
   .valeur-card p { font-size: 0.75rem; color: var(--text-dark); line-height: 1.6; }
 
-  /* ── PRESTATIONS ── */
-  #prestations { background: var(--bordeaux); }
-  #prestations .section-title { color: var(--cream); }
-  #prestations .section-label { color: var(--gold-light); }
-  .presta-tabs {
-    display: flex;
-    gap: 0;
-    margin-bottom: 2.5rem;
-    border-bottom: 1px solid var(--bordeaux-light);
-  }
-  .presta-tab {
-    background: none;
-    border: none;
-    padding: 0.75rem 1.25rem;
-    font-family: var(--font-sans);
-    font-size: 0.65rem;
-    font-weight: 400;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--cream-mid);
-    cursor: pointer;
-    border-bottom: 2px solid transparent;
-    margin-bottom: -1px;
-    transition: all 0.2s;
-  }
-  .presta-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
-  .presta-panel { display: none; }
-  .presta-panel.active { display: block; }
-  .formule-card {
-    background: rgba(246,240,234,0.08);
-    border: 1px solid rgba(107,75,53,0.25);
-    padding: 1.75rem 1.5rem;
-    margin-bottom: 1rem;
-    position: relative;
-    transition: border-color 0.2s;
-  }
-  .formule-card.featured { border-color: var(--gold); }
-  .formule-badge {
-    position: absolute;
-    top: -1px;
-    right: 1.5rem;
-    background: var(--gold);
-    color: var(--bordeaux);
-    font-size: 0.55rem;
-    font-weight: 400;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    padding: 3px 10px;
-  }
-  .formule-name {
-    font-family: var(--font-serif);
-    font-size: 1.4rem;
-    font-weight: 400;
-    color: var(--cream);
-    margin-bottom: 0.25rem;
-  }
-  .formule-price {
-    font-size: 0.7rem;
-    letter-spacing: 0.15em;
-    color: var(--gold);
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-  }
-  .formule-desc {
-    font-size: 0.8rem;
-    color: var(--cream-mid);
-    line-height: 1.7;
-    margin-bottom: 1rem;
-  }
-  .formule-includes {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-  .formule-includes li {
-    font-size: 0.75rem;
-    color: var(--cream-mid);
-    display: flex;
-    align-items: flex-start;
-    gap: 0.6rem;
-  }
-  .formule-includes li::before {
-    content: '';
-    width: 12px;
-    height: 1px;
-    background: var(--gold);
-    display: block;
-    margin-top: 0.55em;
-    flex-shrink: 0;
-  }
-  .devis-note {
-    margin-top: 2rem;
-    padding: 1.25rem 1.5rem;
-    border: 1px solid rgba(107,75,53,0.2);
-    font-size: 0.8rem;
-    color: var(--cream-mid);
-    line-height: 1.7;
-    text-align: center;
-  }
-  .devis-note strong { color: var(--gold); font-weight: 400; }
-
   /* ── PORTFOLIO ── */
-  #portfolio { background: var(--cream-mid); }
+  #portfolio { background: var(--fonce); }
   .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -503,7 +372,7 @@
     overflow: hidden;
     position: relative;
     aspect-ratio: 1/1;
-    background: var(--cream-dark);
+    background: var(--clair);
   }
   .portfolio-pack.wide {
     grid-column: span 2;
@@ -531,41 +400,23 @@
     font-size: 0.55rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: var(--cream-dark);
+    color: var(--text-dark);
     margin-bottom: 0.2rem;
   }
   .pack-title {
     font-family: var(--font-serif);
     font-size: 1rem;
     font-weight: 400;
-    color: var(--cream);
+    color: var(--text-dark);
     line-height: 1.2;
   }
   .pack-count {
     font-size: 0.6rem;
-    color: var(--cream-mid);
+    color: var(--text-dark);
     letter-spacing: 0.1em;
     margin-top: 0.2rem;
   }
   /* Photo placeholder in portfolio */
-  .pack-photo-placeholder {
-    width: 100%;
-    height: 100%;
-    background: var(--cream-dark);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    color: var(--bordeaux);
-  }
-  .pack-photo-placeholder p {
-    font-size: 0.6rem;
-    letter-spacing: 0.1em;
-    text-align: center;
-    padding: 0 0.5rem;
-  }
-
   /* ── LIGHTBOX ── */
   .lightbox {
     display: none;
@@ -587,12 +438,12 @@
     font-family: var(--font-serif);
     font-size: 1.1rem;
     font-weight: 300;
-    color: var(--cream);
+    color: var(--text-light);
   }
   .lightbox-close {
     background: none;
     border: none;
-    color: var(--cream-mid);
+    color: var(--text-light);
     font-size: 1.5rem;
     cursor: pointer;
     line-height: 1;
@@ -626,11 +477,11 @@
     width: 80vw;
     max-width: 500px;
     aspect-ratio: 3/4;
-    background: var(--cream-dark);
+    background: var(--clair);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--bordeaux);
+    color: var(--text-dark);
     font-size: 0.75rem;
     letter-spacing: 0.1em;
     text-align: center;
@@ -640,9 +491,9 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(107,75,53,0.72);
+    background: var(--fonce);
     border: none;
-    color: var(--cream);
+    color: var(--text-light);
     font-size: 1.5rem;
     width: 44px;
     height: 44px;
@@ -671,11 +522,11 @@
     transition: opacity 0.2s;
     border: 1px solid transparent;
   }
-  .lightbox-thumb.active { opacity: 1; border-color: var(--gold); }
+  .lightbox-thumb.active { opacity: 1; border-color: var(--text-dark); }
   .lightbox-thumb-placeholder {
     width: 48px;
     height: 48px;
-    background: var(--cream-dark);
+    background: var(--clair);
     opacity: 0.7;
     flex-shrink: 0;
     cursor: pointer;
@@ -684,67 +535,17 @@
     align-items: center;
     justify-content: center;
   }
-  .lightbox-thumb-placeholder.active { opacity: 1; border-color: var(--gold); }
+  .lightbox-thumb-placeholder.active { opacity: 1; border-color: var(--text-dark); }
   .lightbox-counter {
     font-size: 0.65rem;
     letter-spacing: 0.15em;
-    color: var(--cream-mid);
+    color: var(--text-light);
     text-align: center;
     padding: 0 0 0.5rem;
   }
 
-  /* ── AVIS ── */
-  #avis { background: var(--bordeaux); }
-  #avis .section-title { color: var(--cream); }
-  #avis .section-label { color: var(--gold-light); }
-  .avis-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-  .avis-card {
-    background: rgba(246,240,234,0.08);
-    border: 1px solid rgba(246,240,234,0.18);
-    padding: 1.5rem;
-  }
-  .avis-stars { color: var(--gold); font-size: 0.75rem; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
-  .avis-text {
-    font-family: var(--font-serif);
-    font-size: 1rem;
-    font-weight: 300;
-    font-style: italic;
-    color: var(--cream);
-    line-height: 1.7;
-    margin-bottom: 1rem;
-  }
-  .avis-author {
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--gold);
-  }
-  .avis-google-link {
-    text-align: center;
-    margin-top: 2rem;
-  }
-  .avis-google-link a {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--cream);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(246,240,234,0.3);
-    padding-bottom: 4px;
-    transition: color 0.2s;
-  }
-  .avis-google-link a:hover { color: var(--gold); }
-
   /* ── CONTACT ── */
-  #contact { background: var(--cream-dark); }
+  #contact { background: var(--clair); }
   .contact-grid {
     display: flex;
     flex-direction: column;
@@ -765,7 +566,7 @@
     font-size: 0.6rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: var(--gold-deep);
+    color: var(--text-dark);
     font-weight: 500;
   }
   .contact-item a, .contact-item span {
@@ -774,73 +575,45 @@
     text-decoration: none;
     font-weight: 400;
   }
-  /* .contact-item a:hover { color: var(--bordeaux-light); } */
 
   .contact-cta {
     display: inline-block;
-    background: var(--cream-mid);
+    background: var(--gris);
+    color: var(--text-light);
     font-size: 0.65rem;
     font-weight: 400;
     letter-spacing: 0.25em;
     text-transform: uppercase;
     text-decoration: none;
     padding: 1rem 2rem;
-    transition: background 0.2s;
+    transition: background 0.2s, color 0.2s;
     text-align: center;
   }
-  /*.contact-cta:hover { background: var(--gold-deep); }*/
 
   /* ── GOOGLE FORM ── */
   .contact-form-wrap { margin-top: 1rem; }
-  .form-placeholder {
-    border: 1px dashed var(--bordeaux-light);
-    background: rgba(246,240,234,0.7);
-    padding: 2.5rem 1.5rem;
-    text-align: center;
-  }
-  .form-placeholder-title {
-    font-family: var(--font-serif);
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: var(--bordeaux);
-    margin-bottom: 0.5rem;
-  }
-  .form-placeholder-text {
-    font-size: 0.75rem;
-    color: var(--text-dark);
-    line-height: 1.7;
-    max-width: 380px;
-    margin: 0 auto;
-  }
-  .google-form-embed {
-    width: 100%;
-    min-height: 900px;
-    border: none;
-    display: block;
-    background: var(--cream);
-  }
   .zone-info {
     font-size: 0.75rem;
     color: var(--text-dark);
     line-height: 1.7;
-    border-left: 2px solid var(--bordeaux);
+    border-left: 2px solid var(--fonce);
     padding-left: 1rem;
   }
 
   /* ── RÉSEAUX ── */
-  #reseaux { background: var(--bordeaux); padding: 3rem 1.5rem; }
+  #reseaux { background: var(--fonce); padding: 3rem 1.5rem; }
   .reseaux-inner { text-align: center; }
   .reseaux-title {
     font-family: var(--font-serif);
     font-size: 1.5rem;
     font-weight: 300;
-    color: var(--cream);
+    color: var(--text-light);
     margin-bottom: 0.5rem;
   }
   .reseaux-sub {
     font-size: 0.65rem;
     letter-spacing: 0.2em;
-    color: var(--gold-light);
+    color: var(--text-light);
     text-transform: uppercase;
     margin-bottom: 2rem;
   }
@@ -854,20 +627,20 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    border: 1px solid rgba(201,169,110,0.3);
+    border: 1px solid var(--fonce);
     padding: 0.6rem 1.1rem;
-    color: var(--cream);
+    color: var(--text-light);
     text-decoration: none;
     font-size: 0.65rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     transition: border-color 0.2s, color 0.2s;
   }
-  .reseau-link:hover { border-color: var(--gold); color: var(--gold); }
+  .reseau-link:hover { border-color: var(--text-light); color: var(--text-light); }
 
   /* ── FOOTER ── */
   footer {
-    background: var(--cream-mid);
+    background: var(--gris);
     padding: 2.5rem 1.5rem;
     text-align: center;
   }
@@ -886,7 +659,7 @@
     letter-spacing: 0.05em;
   }
   .footer-legal a { color: var(--text-dark); text-decoration: none; }
-  .footer-legal a:hover { color: var(--bordeaux); }
+  .footer-legal a:hover { color: var(--text-dark); }
   .footer-sep { margin: 0 0.5rem; }
 
   /* ── MENTIONS LÉGALES MODAL ── */
@@ -901,7 +674,7 @@
   }
   .modal-overlay.open { display: block; }
   .modal-box {
-    background: var(--cream);
+    background: var(--clair);
     max-width: 680px;
     margin: 0 auto;
     padding: 2rem 1.5rem;
@@ -915,21 +688,21 @@
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--bordeaux);
+    color: var(--text-dark);
     line-height: 1;
   }
   .modal-box h2 {
     font-family: var(--font-serif);
     font-size: 1.5rem;
     font-weight: 300;
-    color: var(--bordeaux);
+    color: var(--text-dark);
     margin-bottom: 1.5rem;
   }
   .modal-box h3 {
     font-family: var(--font-serif);
     font-size: 1rem;
     font-weight: 400;
-    color: var(--bordeaux);
+    color: var(--text-dark);
     margin: 1.5rem 0 0.5rem;
   }
   .modal-box p {
@@ -984,7 +757,7 @@
 <!-- NAV -->
 <nav id="main-nav">
   <a href="#accueil" class="nav-logo">
-    <img src="Images/logo-maelys.png" alt="Maelys Chaveroux — Makeup Artist" class="nav-logo-img">
+    <img src="Images/logo2.png" alt="Maelys Chaveroux — Makeup Artist" class="nav-logo-img">
   </a>
   <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -1017,9 +790,7 @@
 <!-- À PROPOS -->
 <section id="apropos">
   <div class="apropos-grid">
-    <div class="apropos-photo-wrap fade-in">
-      <!-- <img src="Images/maelys.jpeg" alt="Maelys Chaveroux Makeup Artist" class="apropos-photo"> -->
-    </div>
+    <div class="apropos-photo-wrap fade-in"></div>
     <div class="fade-in">
       <p class="section-label">À propos</p>
       <h2 class="section-title">Révéler ce que vous êtes,<br>sublimer ce que vous ressentez</h2>
@@ -1051,24 +822,6 @@
   <h2 class="section-title">Mes réalisations</h2>
   <div class="divider"></div>
   <p style="font-size:0.8rem;color:var(--text-dark);line-height:1.7;margin-bottom:1rem">Cliquez sur un projet pour parcourir toutes les photos en galerie.</p>
-
-  <!--
-  ══════════════════════════════════════════════════════════
-  COMMENT AJOUTER VOS PHOTOS AU PORTFOLIO ?
-  ══════════════════════════════════════════════════════════
-  Chaque "pack" est un groupe de photos (ex : un mariage, un shooting).
-  Pour ajouter un pack :
-  1. Copiez un bloc .portfolio-pack ci-dessous
-  2. Remplacez data-pack-title="..." par le nom du projet
-  3. Remplacez data-pack-type="..." par "Mariage" ou "Shooting"
-  4. Dans data-images='[...]', listez les chemins de vos photos
-     Exemple : data-images='["photos/mariage1.jpg","photos/mariage2.jpg"]'
-  5. Remplacez l'image de couverture (la balise <img src="...">)
-  
-  Format d'image recommandé : JPG, n'importe quelle taille,
-  le site s'adapte automatiquement à toutes les dimensions.
-  ══════════════════════════════════════════════════════════
-  -->
 
   <div class="portfolio-grid">
     <!-- Pack 1 : Mariage (large) -->
@@ -1231,7 +984,7 @@
     <div>
       <p class="contact-intro">Chaque projet est unique. Contactez-moi pour échanger sur vos besoins et recevoir un devis personnalisé, sans engagement.</p>
       <div class="zone-info" style="margin-top:2rem">
-        <strong style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--bordeaux);font-weight:400">Zone d'intervention</strong><br>
+        <strong style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-dark);font-weight:400">Zone d'intervention</strong><br>
         Nouvelle-Aquitaine · Bordeaux<br>
         Déplacement possible sur toute la France sur demande.
       </div>
@@ -1239,21 +992,18 @@
     <div class="contact-items">
       <div class="contact-item">
         <span class="contact-item-label">Email</span>
-        <!-- Remplacez par votre email -->
         <a href="mailto:maelyschaveroux.pro@gmail.com">maelyschaveroux.pro@gmail.com</a>
       </div>
       <div class="contact-item">
         <span class="contact-item-label">Téléphone</span>
-        <!-- Remplacez par votre numéro -->
         <a href="tel:+33684892579">+33 6 84 89 25 79</a>
       </div>
       <div class="contact-item" style="margin-top:0.5rem">
         <a href="mailto:maelyschaveroux.pro@gmail.com" class="contact-cta">Demander un devis gratuit</a>
       </div>
+      <div></div>
     </div>
   </div>
-
-  <div>  &nbsp; </div>
 
 <!-- RÉSEAUX -->
 <section id="reseaux">
@@ -1372,16 +1122,6 @@ window.addEventListener('scroll', () => {
   document.getElementById('main-nav').classList.toggle('scrolled', window.scrollY > 50);
 });
 
-// ── TABS PRESTATIONS ──
-document.querySelectorAll('.presta-tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('.presta-tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.presta-panel').forEach(p => p.classList.remove('active'));
-    tab.classList.add('active');
-    document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
-  });
-});
-
 // ── LIGHTBOX ──
 let currentImages = [], currentIndex = 0;
 
@@ -1414,7 +1154,7 @@ function renderLightbox() {
   img.className = 'lightbox-img';
   img.alt = 'Photo ' + (currentIndex + 1);
   img.onerror = function() {
-    container.innerHTML = '<div class="lightbox-img-placeholder"><p style="font-size:0.7rem;letter-spacing:0.1em;text-align:center">Photo à venir<br><span style="color:var(--gold);font-size:0.6rem">' + src + '</span></p></div>';
+    container.innerHTML = '<div class="lightbox-img-placeholder"><p style="font-size:0.7rem;letter-spacing:0.1em;text-align:center">Photo à venir<br><span style="color:var(--fonce);font-size:0.6rem">' + src + '</span></p></div>';
   };
   img.onload = function() { container.innerHTML = ''; container.appendChild(img); };
   container.innerHTML = '<div class="lightbox-img-placeholder" style="display:flex;align-items:center;justify-content:center"><p style="font-size:0.7rem">Chargement...</p></div>';
