@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Maelys Chaveroux Makeup Artist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav" id="site-nav">
+  <a href="index.html#apropos" class="nav-link">About</a>
+  <a href="index.html#services" class="nav-link">Services</a>
+  <a href="index.html" class="nav-logo">
+    <img src="Images/logo_nouveau.png" alt="Maelys Chaveroux — Makeup Artist" class="nav-logo-img">
+  </a>
+  <a href="book.html" class="nav-link">Book</a>
+  <a href="contact.html" class="nav-link active">Contact</a>
+</nav>
+
+<section id="contact-page">
+  <p class="section-label">Contact</p>
+  <h1 class="section-title">Parlons de<br>votre projet</h1>
+  <div class="divider"></div>
+
+  <div class="contact-info-grid fade-in">
+    <div class="contact-info-item">
+      <span class="contact-info-label">Email</span>
+      <a href="mailto:maelyschaveroux.pro@gmail.com">maelyschaveroux.pro@gmail.com</a>
+    </div>
+    <div class="contact-info-item">
+      <span class="contact-info-label">Téléphone</span>
+      <a href="tel:+33684892579">+33 6 84 89 25 79</a>
+    </div>
+    <div class="contact-info-item">
+      <span class="contact-info-label">Instagram</span>
+      <a href="https://www.instagram.com/maelys.muapro" target="_blank" rel="noopener">@maelys.muapro</a>
+    </div>
+    <div class="contact-info-item">
+      <span class="contact-info-label">LinkedIn</span>
+      <a href="https://www.linkedin.com/in/ma%C3%ABlys-chaveroux-3a135b270/" target="_blank" rel="noopener">Maëlys Chaveroux</a>
+    </div>
+  </div>
+
+  <!-- GOOGLE FORM
+       Remplacez YOUR_FORM_ID_HERE par l'ID de votre formulaire Google (visible dans le lien
+       "Envoyer" > onglet <> de Google Forms), ou collez directement l'URL d'intégration complète. -->
+  <div class="contact-form-wrap fade-in">
+    <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID_HERE/viewform?embedded=true"
+      title="Formulaire de contact">Chargement du formulaire…</iframe>
+  </div>
+
+  <!-- CARTE — centrée sur Bordeaux -->
+  <div class="contact-map-wrap fade-in">
+    <iframe
+      src="https://www.google.com/maps?q=Bordeaux,France&z=9&output=embed"
+      title="Zone d'intervention — Bordeaux" loading="lazy"></iframe>
+    <p class="contact-map-caption">Nouvelle-Aquitaine · Bordeaux · Dordogne</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-block">
+    <span class="footer-label">Localisation</span>
+    <span>Nouvelle-Aquitaine</span>
+    <span>Bordeaux</span>
+    <span>Dordogne</span>
+  </div>
+  <div class="footer-block">
+    <span class="footer-label">Contact</span>
+    <a href="contact.html">Me contacter</a>
+    <a href="tel:+33684892579">+33 6 84 89 25 79</a>
+    <a href="mailto:maelyschaveroux.pro@gmail.com">maelyschaveroux.pro@gmail.com</a>
+  </div>
+  <div class="footer-block">
+    <span class="footer-label">Socials</span>
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/maelys.muapro" target="_blank" rel="noopener" class="footer-social-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        Instagram
+      </a>
+      <a href="https://www.linkedin.com/in/ma%C3%ABlys-chaveroux-3a135b270/" target="_blank" rel="noopener" class="footer-social-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+    </div>
+  </div>
+  <div class="footer-block">
+    <span class="footer-label">Légal</span>
+    <div class="footer-legal">
+      <span>© 2026 Maelys Chaveroux</span>
+      <span class="footer-sep">·</span>
+      <a href="#" onclick="openModal('mentions');return false;">Mentions légales</a>
+    </div>
+  </div>
+</footer>
+
+<!-- MODALE MENTIONS LÉGALES -->
+<div class="modal-overlay" id="modal-mentions">
+  <div class="modal-box">
+    <button class="modal-close" aria-label="Fermer">✕</button>
+    <h2>Mentions légales</h2>
+    <h3>Éditeur du site</h3>
+    <p>Maelys Chaveroux — Auto-entrepreneur / [Forme juridique à compléter]<br>
+    Email : maelyschaveroux.pro@gmail.com<br>
+    Téléphone : +33 6 84 89 25 79</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
