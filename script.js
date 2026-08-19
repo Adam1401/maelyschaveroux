@@ -3,25 +3,7 @@
    Comportements partagés par les 3 pages.
    ========================================================================== */
 
-/* ── NAV : cache au scroll vers le bas, revient vers le haut ── */
-(function () {
-  const nav = document.getElementById('site-nav');
-  if (!nav) return;
-  let lastY = window.scrollY;
-  const threshold = 80; // ne rien faire tant qu'on n'a pas dépassé cette hauteur
-
-  window.addEventListener('scroll', () => {
-    const y = window.scrollY;
-    if (y <= 0) {
-      nav.classList.remove('nav-hidden'); // tout en haut : toujours visible
-    } else if (y > lastY && y > threshold) {
-      nav.classList.add('nav-hidden'); // on descend : on cache
-    } else if (y < lastY) {
-      nav.classList.remove('nav-hidden'); // on remonte : on affiche
-    }
-    lastY = y;
-  }, { passive: true });
-})();
+/* ── NAV : le bandeau ne se modifie plus via JavaScript. */
 
 /* ── AVIS : étoiles + carrousel automatique ──
    Pour modifier les avis : éditez le tableau AVIS_DATA ci-dessous.
@@ -92,44 +74,6 @@ function starsSVG(note) {
   setInterval(() => {
     goToAvis((current + 1) % slides.length);
   }, 5000);
-})();
-
-/* ── SERVICES : ouverture d'une pop-up descriptive au clic ──
-   Pour modifier les textes : éditez SERVICES_DATA. */
-const SERVICES_DATA = {
-  bridal: {
-    titre: 'Bridal',
-    texte: "Le maquillage de mariage est pensé sur-mesure : essai en amont, produits longue tenue et résultat waterproof pour tenir toute la journée (et la nuit !). Une prestation pensée pour vous et, si besoin, pour tout votre cortège."
-  },
-  commercial: {
-    titre: 'Commercial',
-    texte: "Publicité, catalogue, contenu de marque : un maquillage impeccable devant l'objectif, pensé pour la lumière et les retouches, en collaboration étroite avec le photographe et la direction artistique."
-  },
-  fashion: {
-    titre: 'Fashion',
-    texte: "Éditoriaux et shootings mode : des looks affirmés, créatifs et sur-mesure, pensés en accord avec la direction artistique du shooting, du naturel sublimé au maquillage graphique."
-  }
-};
-
-(function initServices() {
-  const cards = document.querySelectorAll('.service-card');
-  const modal = document.getElementById('modal-service');
-  if (!cards.length || !modal) return;
-
-  const titleEl = modal.querySelector('.modal-service-title');
-  const textEl = modal.querySelector('.modal-service-text');
-
-  cards.forEach(card => {
-    card.addEventListener('click', () => {
-      const key = card.getAttribute('data-service');
-      const data = SERVICES_DATA[key];
-      if (!data) return;
-      titleEl.textContent = data.titre;
-      textEl.textContent = data.texte;
-      modal.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    });
-  });
 })();
 
 /* ── MODALES génériques (services + mentions légales) ── */

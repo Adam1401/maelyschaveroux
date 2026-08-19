@@ -12,41 +12,34 @@
 </head>
 <body>
 
-<!-- NAV -->
-<nav class="site-nav" id="site-nav">
-  <a href="index.html#apropos" class="nav-link">About</a>
-  <a href="index.html#services" class="nav-link">Services</a>
-  <a href="index.html" class="nav-logo">
-    <img src="Images/logo_nouveau.png" alt="Maelys Chaveroux — Makeup Artist" class="nav-logo-img">
-  </a>
-  <a href="book.html" class="nav-link">Book</a>
-  <a href="contact.html" class="nav-link">Contact</a>
-</nav>
-
 <!-- HERO -->
 <section id="accueil">
-  <div class="hero-bg"></div>
-  <!-- Image de couverture en fond : remplacez Images/Couverture.jpeg dans style.css (.hero-bg) -->
-  <div class="hero-front-img-wrap">
-    <!-- Image supplémentaire centrée, devant : remplacez Images/portrait-hero.jpeg -->
-    <img src="Images/maelys.jpg" alt="Maelys Chaveroux, makeup artist">
-  </div>
+  <!-- NAV -->
+  <nav class="site-nav" id="site-nav">
+    <a href="index.html#apropos" class="nav-link">About</a>
+    <a href="index.html#services" class="nav-link">Services</a>
+    <a href="index.html" class="nav-logo">
+      <img src="Images/logo nouveau.png" alt="Maelys Chaveroux — Makeup Artist" class="nav-logo-img">
+    </a>
+    <a href="book.html" class="nav-link">Book</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+  </nav>
   <div class="hero-content">
     <p class="hero-eyebrow">Makeup Artist — Nouvelle-Aquitaine</p>
-    <h1 class="hero-title">Maelys Chaveroux</h1>
     <p class="hero-subtitle">Bordeaux</p>
   </div>
+  <div class="hero-front-img-wrap">
+    <!-- Image supplémentaire centrée, devant : remplacez Images/portrait-hero.jpeg -->
+    <img src="Images/maelys2.jpeg" alt="Maelys Chaveroux, makeup artist">
+  </div>
+  
 </section>
 
 <!-- AVIS -->
 <section id="avis" class="fade-in">
-  <p class="section-label">Avis</p>
-  <h2 class="section-title">Ce qu'elles en disent</h2>
-  <div class="divider"></div>
   <div class="avis-note-globale">
     <div class="stars" id="avis-note-globale-stars"></div>
     <span class="avis-note-chiffre" id="avis-note-chiffre"></span>
-    <span class="avis-note-sous">D'après les avis clientes</span>
   </div>
   <div class="avis-carousel" id="avis-carousel"></div>
   <div class="avis-dots" id="avis-dots"></div>
@@ -57,12 +50,9 @@
   <p class="section-label">About me</p>
   <h2 class="section-title">Révéler ce que vous êtes,<br>sublimer ce que vous ressentez</h2>
   <div class="about-stack">
-    <!-- Élément purement décoratif : donne l'illusion d'un second cadre derrière la photo -->
-    <div class="about-decor"></div>
-
     <div class="about-content">
       <div class="about-photo-card">
-        <img src="Images/maelys.jpg" alt="Maelys Chaveroux">
+        <img src="Images/aboutmeimage.jpeg" alt="Maelys Chaveroux">
       </div>
       <p>Enchantée, moi c'est Maëlys, makeup artist diplômée.</p>
       <p>Ce serait vous mentir si je vous disais que j'ai toujours voulu faire ce métier. Ce qui m'a toujours guidée, en revanche, c'est l'envie profonde de prendre soin des autres. Mon parcours en témoigne : psychomotricienne, puis esthéticienne, jusqu'à trouver ma véritable voie dans le maquillage.</p>
@@ -76,24 +66,20 @@
 <!-- SERVICES -->
 <section id="services" class="fade-in">
   <p class="section-label">Services</p>
-  <h2 class="section-title">Mes prestations</h2>
   <div class="divider"></div>
   <div class="services-grid">
-    <div class="service-card" data-service="bridal">
-      <!-- remplacez Images/service-bridal.jpeg -->
+    <a class="service-card" href="Brochures/bridal.pdf" target="_blank" rel="noopener">
       <img src="Images/service-bridal.jpeg" alt="Bridal">
       <div class="service-overlay"><span class="service-name">Bridal</span></div>
-    </div>
-    <div class="service-card" data-service="commercial">
-      <!-- remplacez Images/service-commercial.jpeg -->
+    </a>
+    <a class="service-card" href="Brochures/commercial.pdf" target="_blank" rel="noopener">
       <img src="Images/service-commercial.jpeg" alt="Commercial">
       <div class="service-overlay"><span class="service-name">Commercial</span></div>
-    </div>
-    <div class="service-card" data-service="fashion">
-      <!-- remplacez Images/service-fashion.jpeg -->
-      <img src="Images/service-fashion.jpeg" alt="Fashion">
-      <div class="service-overlay"><span class="service-name">Fashion</span></div>
-    </div>
+    </a>
+    <a class="service-card" href="Brochures/event.pdf" target="_blank" rel="noopener">
+      <img src="Images/service-event.jpeg" alt="Event">
+      <div class="service-overlay"><span class="service-name">Event</span></div>
+    </a>
   </div>
 </section>
 
@@ -134,30 +120,25 @@
   </div>
 </footer>
 
-<!-- MODALE SERVICE -->
-<div class="modal-overlay" id="modal-service">
-  <div class="modal-box">
-    <button class="modal-close" aria-label="Fermer">✕</button>
-    <h2 class="modal-service-title"></h2>
-    <p class="modal-service-text"></p>
-  </div>
-</div>
-
 <!-- MODALE MENTIONS LÉGALES -->
 <div class="modal-overlay" id="modal-mentions">
   <div class="modal-box">
     <button class="modal-close" aria-label="Fermer">✕</button>
     <h2>Mentions légales</h2>
-    <h3>Éditeur du site</h3>
-    <p>Maelys Chaveroux — Auto-entrepreneur / [Forme juridique à compléter]<br>
-    Adresse : [Votre adresse — à compléter]<br>
-    SIRET : [Votre SIRET — à compléter]<br>
-    Email : maelyschaveroux.pro@gmail.com<br>
-    Téléphone : +33 6 84 89 25 79</p>
+    <h3>Édition du site</h3>
+    <p>Le présent site est édité par Chaveroux Maelys, exerçant sous l'enseigne MaelysChaveroux, Entrepreneur Individuel, domicilié(e) a Cenon (33150), immatriculé(e) au Registre National des Entreprises (RNE) sous le numéro SIRET [en cours].</p>
+    <h3>TVA</h3>
+    <p>Numéro de TVA intracommunautaire : [TVA non applicable, art. 293 B du CGI].</p>
+    <h3>Directeur de la publication</h3>
+    <p>Maelys Chaveroux</p>
+    <h3>Contact</h3>
+    <p>maelyschaveroux.pro@gmail.com / +33 6 84 89 25 79</p>
     <h3>Hébergement</h3>
-    <p>[Nom de votre hébergeur — à compléter]<br>[Adresse de l'hébergeur]</p>
+    <p>Le site est hébergé par GitHub Inc., dont le siège social est situé au 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, États-Unis (<a href="https://support.github.com" target="_blank" rel="noopener">https://support.github.com</a>).</p>
     <h3>Propriété intellectuelle</h3>
-    <p>L'ensemble du contenu de ce site (textes, photographies, illustrations) est la propriété exclusive de Maelys Chaveroux, sauf mention contraire.</p>
+    <p>L'ensemble des contenus présents sur ce site (photos de réalisations, textes, graphismes, logos) sont la propriété exclusive de Maelys Chaveroux. Toute reproduction, représentation ou diffusion, en tout ou partie, sans autorisation préalable écrite est strictement interdite.</p>
+    <h3>Données personnelles et cookies</h3>
+    <p>Ce site est un portfolio purement informatif. Il ne collecte aucune donnée personnelle et n'utilise aucun cookie de suivi ou de mesure d'audience.</p>
   </div>
 </div>
 

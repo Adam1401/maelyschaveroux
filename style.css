@@ -69,27 +69,24 @@ section { padding: var(--section-pad); }
 }
 
 /* ==========================================================================
-   NAV — bandeau fixe qui se cache au scroll vers le bas,
-   revient au scroll vers le haut ou en haut de page.
-   Ordre : About · Services · Logo (centre) · Book · Contact
+   NAV — bandeau en haut de la page, fixe et transparent au-dessus de l'accueil.
    ========================================================================== */
 .site-nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 200;
   height: var(--nav-height);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.25rem;
+  gap: 2rem;
   padding: 0 1rem;
-  background: rgba(226, 225, 221, 0.82);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
-  transition: transform 0.35s ease;
+  background: transparent;
 }
-.site-nav.nav-hidden { transform: translateY(-100%); }
+.site-nav.nav-hidden { transform: none !important; }
 
 .nav-link {
   font-size: 0.62rem;
@@ -115,11 +112,11 @@ section { padding: var(--section-pad); }
   width: auto;
   display: block;
   transition: height 0.3s ease, transform 0.3s ease;
-  transform: scale(1.1);
+  transform: scale(1.7);
 }
 
 /* espace pour compenser le nav fixe */
-body { padding-top: 0; } /* le hero prend toute la hauteur, pas besoin d'offset sur l'accueil */
+body { padding-top: 0; } /* #accueil gère lui-même son offset via padding-top: var(--nav-height) */
 .page-offset { padding-top: var(--nav-height); }
 
 @media (min-width: 600px) {
@@ -130,73 +127,70 @@ body { padding-top: 0; } /* le hero prend toute la hauteur, pas besoin d'offset 
 
 /* ==========================================================================
    HERO — Accueil
+   La section ne fait plus toute la hauteur de l'écran : la photo est collée
+   juste sous le bandeau (nav), centrée horizontalement, et le texte suit
+   naturellement en dessous, sans grand espace vide.
    ========================================================================== */
 #accueil {
   position: relative;
-  min-height: 100svh;
   overflow: hidden;
-  display: flex;
-  align-items: flex-end;
   padding: 0 0 3rem;
+  background: var(--clair) url("Images/fond2.png") center/cover no-repeat;
 }
-.hero-bg {
+#accueil::after {
+  content: "";
   position: absolute;
   inset: 0;
-  z-index: 1;
-  background-image: url('../Images/Couverture.jpeg');
-  background-size: cover;
-  background-position: center;
-}
-.hero-bg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0) 35%, rgba(0,0,0,0.35) 100%);
+  background: rgba(255, 255, 255, 0.35);
+  pointer-events: none;
 }
 .hero-front-img-wrap {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   z-index: 2;
-  width: 50%;
+  width: 58%;
+  max-width: 340px;
   aspect-ratio: 3/4;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  margin: 0 auto;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
   border: 6px solid var(--clair);
 }
-.hero-front-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+.hero-front-img-wrap img { width: 100%; height: 100%; object-fit: cover;}
 .hero-content {
   position: relative;
   z-index: 3;
   width: 100%;
   text-align: center;
-  padding: 0 1.5rem;
+  padding: 1.5rem 1.5rem 0;
 }
 .hero-eyebrow {
   font-size: 0.62rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--clair);
+  color: var(--text-light);
   margin-bottom: 0.6rem;
 }
 .hero-title {
   font-family: var(--font-titres);
   font-size: clamp(2.2rem, 10vw, 3.6rem);
-  color: var(--clair);
+  color: var(--text-dark);
   line-height: 1;
 }
 .hero-subtitle {
   font-size: 0.75rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--clair);
+  color: var(--text-light);
   margin-top: 0.75rem;
+}
+
+@media (min-width: 700px) {
+  .hero-front-img-wrap { width: 32%; max-width: 380px; }
 }
 
 /* ==========================================================================
    AVIS — étoiles + carrousel
    ========================================================================== */
-#avis { background: var(--clair); text-align: center; }
+#avis { background: var(--gris); text-align: center; }
 .avis-note-globale {
   display: flex;
   flex-direction: column;
@@ -262,7 +256,7 @@ body { padding-top: 0; } /* le hero prend toute la hauteur, pas besoin d'offset 
 .avis-dot {
   width: 6px; height: 6px;
   border-radius: 50%;
-  background: var(--gris);
+  background: var(--clair);
   border: none;
   cursor: pointer;
   padding: 0;
@@ -270,39 +264,36 @@ body { padding-top: 0; } /* le hero prend toute la hauteur, pas besoin d'offset 
 .avis-dot.active { background: var(--text-dark); }
 
 /* ==========================================================================
-   À PROPOS — deux cadres superposés
+   À PROPOS — cadre foncé contenant le texte, photo qui déborde en écrasant
+   son coin supérieur gauche. Le texte commence à droite de la photo, revient
+   à la ligne en restant dans le cadre, puis passe sous la photo une fois
+   qu'il l'a dépassée.
    ========================================================================== */
 #apropos { background: var(--clair); }
 .about-stack {
   position: relative;
   max-width: 480px;
   margin: 3rem auto 0;
+  padding-left: 6%;
 }
 
-/* Rectangle foncé décoratif, indépendant du texte : donne l'impression d'un
-   second cadre derrière la photo, sans jamais toucher le texte. */
-.about-decor {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  width: 50%;
-  aspect-ratio: 3/4;
-  background: var(--fonce);
-  z-index: 0;
-}
-
-/* Conteneur du flux texte + photo flottante */
+/* Cadre foncé qui contient tout le texte */
 .about-content {
   position: relative;
   z-index: 1;
+  background: var(--gris);
+  margin-left: 16%;
+  padding: 2.75rem 1.5rem 2rem 1.75rem;
 }
 .about-content::after { content: ''; display: table; clear: both; }
 
+/* Photo flottante : déborde au-dessus et à gauche du cadre, ce qui donne
+   l'impression qu'elle écrase une partie de son coin. */
 .about-photo-card {
   float: left;
-  width: 50%;
+  width: 54%;
   aspect-ratio: 3/4;
-  margin: 0 1.5rem 1.5rem 0;
+  margin: -2.25rem 1.25rem 1.25rem -22%;
   position: relative;
   z-index: 2;
   box-shadow: 0 14px 34px rgba(0,0,0,0.22);
@@ -324,15 +315,15 @@ body { padding-top: 0; } /* le hero prend toute la hauteur, pas besoin d'offset 
 }
 
 @media (min-width: 700px) {
-  .about-stack { max-width: 620px; }
-  .about-decor { width: 40%; top: 1.5rem; left: 1.5rem; }
-  .about-photo-card { width: 42%; margin: 0 2rem 1.5rem 0; }
+  .about-stack { max-width: 620px; padding-left: 8%; }
+  .about-content { margin-left: 18%; padding: 3.25rem 2rem 2.5rem 2.25rem; }
+  .about-photo-card { width: 44%; margin: -2.5rem 1.75rem 1.5rem -22%; }
 }
 
 /* ==========================================================================
    SERVICES — 3 cases côte à côte
    ========================================================================== */
-#services { background: var(--fonce); }
+#services { background: var(--gris); }
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -597,17 +588,6 @@ footer.site-footer {
   color: var(--text-light);
 }
 .contact-info-item a { font-size: 0.95rem; text-decoration: none; }
-
-.contact-form-wrap {
-  max-width: 640px;
-  margin: 0 auto 3.5rem;
-}
-.contact-form-wrap iframe {
-  width: 100%;
-  min-height: 900px;
-  border: none;
-  background: var(--blanc);
-}
 
 .contact-map-wrap { max-width: 720px; margin: 0 auto; }
 .contact-map-wrap iframe {
