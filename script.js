@@ -9,10 +9,8 @@
    Pour modifier les avis : éditez le tableau AVIS_DATA ci-dessous.
    note : chiffre de 1 à 5 (les demis sont acceptés, ex: 4.5) */
 const AVIS_DATA = [
-  { note: 5, texte: "Maëlys a su me mettre en valeur pour mon mariage tout en respectant ma nature. Maquillage tenu toute la soirée, aucun regret !", auteur: "Camille — Mariée" },
-  { note: 5, texte: "Une écoute incroyable et un vrai savoir-faire. Le shooting était parfait grâce à son maquillage lumineux et naturel.", auteur: "Anna — Shooting beauté" },
-  { note: 4.5, texte: "Professionnelle, ponctuelle et de très bon conseil. Je recommande les yeux fermés pour un maquillage de cortège.", auteur: "Manon — Demoiselle d'honneur" },
-  { note: 5, texte: "Un moment de douceur avant le shooting, et un résultat qui a mis toute l'équipe d'accord. Merci Maëlys !", auteur: "Justine — Shooting publicitaire" }
+  { note: 5, texte: "J’ai eu l’occasion de travailler avec Maelys à plusieurs reprises (shooting commercial, shooting beauté et shooting édito), et ses make-up ont toujours été d’une très grande qualité ! Elle sait être très polyvalente, mais garde toujours une touche élégante et raffinée dans ce qu’elle fait, sans oublier sa gentillesse et sa douceur hors pair ! Je ne peux que vous la conseiller :)", auteur: "Manon — Modèle" },
+  { note: 5, texte: "J’ai eu la chance de bénéficier du travail de Maelys lors d’un shooting inspiration mariage, et j’ai adoré le résultat. Elle a su réaliser un maquillage à la fois sophistiqué et naturel, qui mettait parfaitement en valeur les traits du visage, tout en gardant un rendu élégant et délicat. Merci Maelys !", auteur: "Carla — Shooting mariée" }
 ];
 
 function starsSVG(note) {

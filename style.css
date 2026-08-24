@@ -23,7 +23,7 @@
   --font-texte: 'Jost', sans-serif;
 
   /* Rythme */
-  --section-pad: 4rem 1.5rem;
+  --section-pad: 2.75rem 1rem;
   --container-max: 1100px;
   --nav-height: 64px;
 }
@@ -81,17 +81,17 @@ section { padding: var(--section-pad); }
   height: var(--nav-height);
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  padding: 0 1rem;
+  justify-content: space-between;
+  gap: 0;
+  padding: 0 0.85rem;
   background: transparent;
 }
 .site-nav.nav-hidden { transform: none !important; }
 
 .nav-link {
-  font-size: 0.62rem;
+  font-size: 0.55rem;
   font-weight: 400;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text-light);
   text-decoration: none;
@@ -105,14 +105,14 @@ section { padding: var(--section-pad); }
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  margin: 0 0.35rem;
+  margin: 0 0.15rem;
 }
 .nav-logo-img {
-  height: 44px;
+  height: 38px;
   width: auto;
   display: block;
   transition: height 0.3s ease, transform 0.3s ease;
-  transform: scale(1.7);
+  transform: scale(1.25);
 }
 
 /* espace pour compenser le nav fixe */
@@ -120,7 +120,12 @@ body { padding-top: 0; } /* #accueil gère lui-même son offset via padding-top:
 .page-offset { padding-top: var(--nav-height); }
 
 @media (min-width: 600px) {
-  .site-nav { gap: 2.5rem; }
+  .site-nav {
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 0 1rem;
+  }
+  .nav-logo { margin: 0 0.35rem; }
   .nav-link { font-size: 0.7rem; }
   .nav-logo-img { height: 50px; transform: scale(1.15); }
 }
@@ -135,7 +140,7 @@ body { padding-top: 0; } /* #accueil gère lui-même son offset via padding-top:
   position: relative;
   overflow: hidden;
   padding: 0 0 3rem;
-  background: var(--clair) url("Images/fond2.png") center/cover no-repeat;
+  background: var(--clair) url("Images/Fond_rideau.png") center/cover no-repeat;
 }
 #accueil::after {
   content: "";
@@ -274,7 +279,7 @@ body { padding-top: 0; } /* #accueil gère lui-même son offset via padding-top:
   position: relative;
   max-width: 480px;
   margin: 3rem auto 0;
-  padding-left: 6%;
+  padding-left: 0;
 }
 
 /* Cadre foncé qui contient tout le texte */
@@ -282,8 +287,8 @@ body { padding-top: 0; } /* #accueil gère lui-même son offset via padding-top:
   position: relative;
   z-index: 1;
   background: var(--gris);
-  margin-left: 16%;
-  padding: 2.75rem 1.5rem 2rem 1.75rem;
+  margin-left: 8%;
+  padding: 2.25rem 1rem 1.5rem 1.25rem;
 }
 .about-content::after { content: ''; display: table; clear: both; }
 
@@ -293,7 +298,7 @@ body { padding-top: 0; } /* #accueil gère lui-même son offset via padding-top:
   float: left;
   width: 54%;
   aspect-ratio: 3/4;
-  margin: -2.25rem 1.25rem 1.25rem -22%;
+  margin: -1.75rem 1rem 1rem -8%;
   position: relative;
   z-index: 2;
   box-shadow: 0 14px 34px rgba(0,0,0,0.22);
@@ -477,7 +482,7 @@ footer.site-footer {
    PAGE BOOK — groupes de photos + légendes
    ========================================================================== */
 #book-hero {
-  padding: 6.5rem 1.5rem 2rem;
+  padding: 3rem 1rem 1.5rem;
   text-align: center;
   background: var(--clair);
 }
@@ -572,7 +577,7 @@ footer.site-footer {
 /* ==========================================================================
    PAGE CONTACT
    ========================================================================== */
-#contact-page { padding: 6.5rem 1.5rem 4rem; background: var(--clair); }
+#contact-page { padding: 3rem 1rem 2.75rem; background: var(--clair); }
 .contact-info-grid {
   display: flex;
   flex-direction: column;
