@@ -108,11 +108,11 @@ section { padding: var(--section-pad); }
   margin: 0 0.15rem;
 }
 .nav-logo-img {
-  height: 38px;
+  height: 50px;
   width: auto;
   display: block;
   transition: height 0.3s ease, transform 0.3s ease;
-  transform: scale(1.25);
+  transform: scale(1.6);
 }
 
 /* espace pour compenser le nav fixe */
@@ -126,8 +126,8 @@ body { padding-top: 0; } /* #accueil gère lui-même son offset via padding-top:
     padding: 0 1rem;
   }
   .nav-logo { margin: 0 0.35rem; }
-  .nav-link { font-size: 0.7rem; }
-  .nav-logo-img { height: 50px; transform: scale(1.15); }
+  .nav-link { font-size: 1.0rem; }
+  .nav-logo-img { height: 50px; transform: scale(1.7); }
 }
 
 /* ==========================================================================
@@ -554,7 +554,8 @@ footer.site-footer {
 .lightbox.open { display: flex; }
 .lightbox-header {
   display: flex; justify-content: flex-end; align-items: center;
-  padding: 1rem 1.25rem; flex-shrink: 0;
+  position: absolute; top: 0; right: 0; z-index: 1;
+  padding: 1rem 1.25rem;
 }
 .lightbox-close {
   background: none; border: none; color: var(--clair);
@@ -564,7 +565,13 @@ footer.site-footer {
   flex: 1; display: flex; align-items: center; justify-content: center;
   position: relative; overflow: hidden; min-height: 0;
 }
-.lightbox-img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.lightbox-img {
+  width: auto;
+  height: auto;
+  max-width: calc(100vw - 6rem);
+  max-height: calc(100vh - 5rem);
+  object-fit: contain;
+}
 .lightbox-nav {
   position: absolute; top: 50%; transform: translateY(-50%);
   background: rgba(255,255,255,0.12); border: none; color: var(--clair);
