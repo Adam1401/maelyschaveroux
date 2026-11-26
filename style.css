@@ -1,6 +1,6 @@
 /* ==========================================================================
    MAELYS CHAVEROUX — MAKEUP ARTIST
-   Feuille de style unique, partagée par les 3 pages (index / book / contact)
+   Feuille de style unique, partagée par les 3 pages (index / collection / contact)
    Mobile first : les règles de base ciblent le mobile, les media queries
    (min-width) ajoutent les ajustements tablette / desktop.
    ========================================================================== */
@@ -479,42 +479,42 @@ footer.site-footer {
 }
 
 /* ==========================================================================
-   PAGE BOOK — groupes de photos + légendes
+   PAGE collection — groupes de photos + légendes
    ========================================================================== */
-#book-hero {
+#collection-hero {
   padding: 3rem 1rem 1.5rem;
   text-align: center;
   background: var(--clair);
 }
-.book-groups {
+.collection-groups {
   max-width: 720px;
   margin: 0 auto;
   padding: 0 0 3rem;
 }
-.book-group {
+.collection-group {
   margin-bottom: 2.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.book-group img {
+.collection-group img {
   width: 84%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   margin-bottom: 0.6rem;
   cursor: pointer;
 }
-.book-group img:last-of-type { margin-bottom: 0; }
+.collection-group img:last-of-type { margin-bottom: 0; }
 
-/* Calibrage du cadrage dans le rectangle (voir commentaire dans book.html) */
-.book-group img.pos-top { object-position: top; }
-.book-group img.pos-center { object-position: center; }
-.book-group img.pos-bottom { object-position: bottom; }
+/* Calibrage du cadrage dans le rectangle (voir commentaire dans collection.html) */
+.collection-group img.pos-top { object-position: top; }
+.collection-group img.pos-center { object-position: center; }
+.collection-group img.pos-bottom { object-position: bottom; }
 
 @media (min-width: 700px) {
-  .book-group img { width: 65%; }
+  .collection-group img { width: 65%; }
 }
-.book-caption {
+.collection-caption {
   width: 84%;
   display: flex;
   flex-direction: column;
@@ -524,15 +524,15 @@ footer.site-footer {
   transform: translateX(0.75rem);
 }
 @media (min-width: 700px) {
-  .book-caption { width: 65%; }
+  .collection-caption { width: 65%; }
 }
-.book-caption .caption-name {
+.collection-caption .caption-name {
   font-family: var(--font-titres);
   font-style: italic;
   font-size: 0.95rem;
   color: var(--text-dark);
 }
-.book-caption .caption-credit {
+.collection-caption .caption-credit {
   font-size: 0.65rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -541,7 +541,7 @@ footer.site-footer {
 }
 
 /* ==========================================================================
-   LIGHTBOX (plein écran, book + services)
+   LIGHTBOX (plein écran, collection + services)
    ========================================================================== */
 .lightbox {
   display: none;

@@ -100,7 +100,7 @@ document.querySelectorAll('.modal-close').forEach(btn => {
   });
 });
 
-/* ── LIGHTBOX : plein écran pour les photos (page book) ── */
+/* ── LIGHTBOX : plein écran pour les photos (page collection) ── */
 let currentImages = [];
 let currentIndex = 0;
 
@@ -147,8 +147,8 @@ document.addEventListener('keydown', e => {
   });
 })();
 
-/* Attache le clic plein-écran à toutes les images de groupe (page book) */
-document.querySelectorAll('.book-group').forEach(group => {
+/* Attache le clic plein-écran à toutes les images de groupe (page collection) */
+document.querySelectorAll('.collection-group').forEach(group => {
   const imgs = Array.from(group.querySelectorAll('img'));
   const srcs = imgs.map(i => i.getAttribute('src'));
   imgs.forEach((img, i) => {
